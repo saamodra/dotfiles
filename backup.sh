@@ -17,8 +17,11 @@ sourceConfig=(
 	~/.zshrc
 )
 
+slicedChar=$(expr 8 + ${#USER})
+
 for cfg in ${sourceConfig[@]}; do
-	cp $cfg .
+	dest=`echo $cfg | cut -c ${slicedChar}-`
+	cp $cfg $dest
 	echo "${cfg} copied."
 done
 
