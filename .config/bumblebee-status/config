@@ -8,5 +8,4 @@ date.format=%a, %b %d %Y
 date.left-click=gsimplecal
 time.format=%H:%M:%S
 traffic.exclude=br-027a5aedec2d,br-2d8e55df9ff7,br-8395fcce3ed5,br-7be61498ca35,docker0,lo,tun0
-traffic.showname=False
 

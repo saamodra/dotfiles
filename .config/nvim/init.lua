@@ -43,6 +43,14 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
@@ -183,6 +191,19 @@ require('lualine').setup {
 
 -- Enable Comment.nvim
 require('Comment').setup()
+
+-- Nvim-Tree Setup
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_auto_open = 1
+vim.g.nvim_tree_width = 25
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+
+require("nvim-tree").setup()
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
