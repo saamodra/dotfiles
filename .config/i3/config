@@ -117,16 +117,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1  "
-set $ws2 "2  "
-set $ws3 "3  "
-set $ws4 "4  "
-set $ws5 "5  "
-set $ws6 "6  "
-set $ws7 "7  "
-set $ws8 "8  "
-set $ws9 "9  "
-set $ws10 "10  "
+set $ws1 "1   "
+set $ws2 "2   "
+set $ws3 "3   "
+set $ws4 "4   "
+set $ws5 "5   "
+set $ws6 "6   "
+set $ws7 "7   "
+set $ws8 "8   "
+set $ws9 "9   "
+set $ws10 "10   "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -220,12 +220,22 @@ for_window [class="xdman-Main"] floating enable
 for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
 for_window [title=".*Emulator.*"] floating enable
+for_window [class="^.*"] border pixel 2
+smart_gaps on
+smart_borders on
+set $inner_gaps 5
+set $outer_gaps 5
+
+gaps inner $inner_gaps
+gaps outer $outer_gaps
+
 
 # Run automatically programs
 exec_always flameshot
 
 # Set desktop wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpaper/wallpaper3.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/japan-room.jpg
+exec_always ~/.config/polybar/forest/launch.sh
 
 # Bar and window styling
 set $bg-color 	         #2f343f
@@ -248,7 +258,10 @@ bar {
 	status_command ~/.config/bumblebee-status/bumblebee-status 
         tray_output eDP-1
         tray_padding 3
-        font pango:Inconsolata for Powerline 10
+
+  mode invisible
+
+  font pango:Inconsolata for Powerline 10
 
   colors {
 		background $bg-color
@@ -257,6 +270,6 @@ bar {
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-
 	}
 }
+
