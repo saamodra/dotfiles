@@ -219,6 +219,7 @@ assign [class="Spotify"] $ws10
 for_window [class="xdman-Main"] floating enable
 for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
+for_window [title=".*Emulator.*"] floating enable
 
 # Run automatically programs
 exec_always flameshot
@@ -248,9 +249,10 @@ bar {
         tray_output eDP-1
         tray_padding 3
         font pango:Inconsolata for Powerline 10
-        colors {
+
+  colors {
 		background $bg-color
-	    	separator #757575
+	  separator #757575
 
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color

@@ -13,3 +13,4 @@ alias fm="nnn"
 export NNN_BMS="h:~;D:~/Downloads;C:~/Downloads/Compressed"
 export NNN_USE_EDITOR=1
 
+. "$HOME/.cargo/env"
