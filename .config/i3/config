@@ -202,6 +202,10 @@ bindsym $mod+r mode "resize"
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
 
+# Sink Switcher
+bindcode 152 exec --no-startup-id ~/scripts/sink-switch.sh --speakers
+bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
+
 # Spotify Controls
 bindcode 127 exec "~/App/spotify_control playpause"
 bindcode 75 exec "~/App/spotify_control next"
@@ -217,6 +221,7 @@ assign [class="Spotify"] $ws10
 
 # Set specific app to using floating window
 for_window [class="xdman-Main"] floating enable
+for_window [class="Pycalendar.py"] floating enable
 for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
 for_window [title=".*Emulator.*"] floating enable
