@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of configuration
-sourceConfig=(
+configurations=(
 	"~/.config/i3/config ./.config/i3/config"
 	"~/.config/nvim/lua/custom ./.config/nvim/lua"
   "~/.config/lvim/config.lua ./.config/lvim/config.lua"
@@ -24,9 +24,9 @@ sourceConfig=(
 
 IFS=""
 
-for cfg in ${sourceConfig[@]}; do
-	copyCommand=`echo cp -R $cfg`
-  eval "$copyCommand"
+for cfg in ${configurations[@]}; do
+	backup_command=`echo cp -R $cfg`
+  eval "$backup_command"
 
 	echo "${cfg} copied"
 done
