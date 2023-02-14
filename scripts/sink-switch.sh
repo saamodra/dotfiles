@@ -23,7 +23,6 @@ case "$arg" in
     notify-send "Switched to speakers!"
     ;;
   *)
-    echo "   "
     ;;
 esac
 
