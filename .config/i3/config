@@ -196,15 +196,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# Gap settings
-smart_gaps on
-smart_borders on
-set $inner_gaps 5
-set $outer_gaps 5
-
-gaps inner $inner_gaps
-gaps outer $outer_gaps
-
 bindsym $mod+r mode "resize"
 
 # Sreen brightness controls
@@ -235,6 +226,14 @@ for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 for_window [class="^.*"] border pixel 2
+
+# Gap settings
+smart_gaps on
+set $inner_gaps 5
+set $outer_gaps 5
+
+gaps inner $inner_gaps
+gaps outer $outer_gaps
 
 # Run automatically programs
 exec_always flameshot

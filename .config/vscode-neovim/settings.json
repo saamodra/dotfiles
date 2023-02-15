@@ -99,16 +99,16 @@
   "whichkey.bindings": [
     {
       "key": ";",
-      "name": "commands",
+      "name": "Commands",
       "type": "command",
       "command": "workbench.action.showCommands"
     },
     {
       "key": "/",
-      "name": "comment",
+      "name": "Comment",
       "type": "command",
       "command": "vscode-neovim.send",
-      "args": "<C-/>"
+      "args": "gcc"
     },
     {
       "key": "b",
@@ -422,13 +422,13 @@
     },
     {
       "key": "m",
-      "name": "minimap",
+      "name": "Minimap",
       "type": "command",
       "command": "editor.action.toggleMinimap"
     },
     {
       "key": "n",
-      "name": "highlight",
+      "name": "Highlight",
       "type": "command",
       "command": "vscode-neovim.send",
       "args": ":noh<CR>"
@@ -440,13 +440,13 @@
       "bindings": [
         {
           "key": "f",
-          "name": "files",
+          "name": "Files",
           "type": "command",
           "command": "workbench.action.quickOpen"
         },
         {
           "key": "t",
-          "name": "text",
+          "name": "Text",
           "type": "command",
           "command": "workbench.action.findInFiles"
         }
@@ -794,5 +794,11 @@
     }
   },
   "window.zoomLevel": 1,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/tmp": true
+  },
+  "vscode-run-rspec-file.custom-command": "docker compose exec web rspec"
 }

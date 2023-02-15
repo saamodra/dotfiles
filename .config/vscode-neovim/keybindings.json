@@ -169,7 +169,108 @@
     "when": "editorFocus"
   },
   {
+    "key": "ctrl+d",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "down",
+      "value": 12,
+      "by": "line",
+      "revealCursor": true
+    }
+  },
+  {
+    "key": "ctrl+u",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "up",
+      "value": 12,
+      "by": "line",
+      "revealCursor": true
+    }
+  },
+  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
-  }
+  },
+  {
+    "command": "extension.runLineOnRspec",
+    "key": "ctrl+shift+f10",
+    "when": "editorLangId == 'ruby'"
+  },
+  {
+    "key": "ctrl+shift+f10",
+    "command": "extension.runJest",
+    "when": "editorLangId == 'javascript' || editorLangId == 'javascriptreact'"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+backspace",
+    "command": "bookmarks.clear"
+  },
+  {
+    "key": "ctrl+shift+unknown",
+    "command": "liveshare.join",
+    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-liveshare.join",
+    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+  },
+  {
+    "key": "ctrl+shift+alt+o",
+    "command": "liveshare.join",
+    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "-bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
 ]
