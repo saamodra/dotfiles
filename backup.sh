@@ -25,10 +25,7 @@ configurations=(
 IFS=""
 
 for cfg in ${configurations[@]}; do
-	backup_command=`echo cp -R $cfg`
-  eval "$backup_command"
-
-	echo "${cfg} copied"
+  eval `echo rsync -avzh $cfg`
 done
 
 echo "======================================="

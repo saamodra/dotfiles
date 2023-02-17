@@ -6,7 +6,7 @@ set timeoutlen=400
 set clipboard+=unnamed
 set clipboard+=ideaput
 nnoremap \e :e ~/.ideavimrc<CR>
-nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap \R :action IdeaVim.ReloadVimRc.reload<CR>
 
 "" Plugins  --------------------------------
 """ Surround Plugin  --------------------------------
@@ -45,9 +45,9 @@ Plug 'tommcdo/vim-exchange'
 "   easy-motion-s Search backward
 "   easy-motion-f Search forward
 " See https://github.com/AlexPl292/IdeaVim-EasyMotion#supported-commands for details
-Plug 'easymotion/vim-easymotion'
-map <leader>J <Plug>(easymotion-s)
-map <leader>j <Plug>(easymotion-f)
+set easymotion
+map <leader>f <Plug>(easymotion-s)
+map <leader>F <Plug>(easymotion-f)
 
 """ NERDTree plugin  --------------------------------
 " Emulates NERDTree
@@ -120,6 +120,7 @@ set relativenumber " Set relative line numbers
 map <C-c> <Esc>
 
 """ The Leader Key
+let mapleader=" "
 
 """ Distraction Free Mode
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
