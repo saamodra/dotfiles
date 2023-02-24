@@ -68,7 +68,6 @@
     "source.fixAll.eslint": false
   },
   "editor.rulers": [
-    80,
     120
   ],
   "editor.formatOnSave": false,
@@ -90,8 +89,6 @@
     "switch:command"
   ],
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "ruby.useLanguageServer": true,
-  "ruby.intellisense": "rubyLocate",
   "terminal.integrated.enableMultiLinePasteWarning": false, // Disable scss lint (optional if using scss)
   "terminal.integrated.defaultProfile.linux": "zsh",
   "workbench.colorTheme": "One Dark Pro",
@@ -298,27 +295,22 @@
     },
     {
       "key": "f",
-      "name": "Find & Replace...",
+      "name": "Format",
       "type": "bindings",
       "bindings": [
         {
           "key": "f",
-          "name": "File",
+          "name": "Selection",
           "type": "command",
-          "command": "editor.action.startFindReplaceAction"
+          "command": "editor.action.formatSelection",
+          "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
         },
         {
-          "key": "s",
-          "name": "Symbol",
+          "key": "d",
+          "name": "Document",
           "type": "command",
-          "command": "editor.action.rename",
-          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-        },
-        {
-          "key": "p",
-          "name": "Project",
-          "type": "command",
-          "command": "workbench.action.replaceInFiles"
+          "command": "editor.action.formatDocument",
+          "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
         }
       ]
     },
@@ -793,12 +785,25 @@
       "terminal.ansiBrightYellow": "#d19a66"
     }
   },
-  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "files.watcherExclude": {
     "**/.git": true,
     "**/node_modules": true,
     "**/tmp": true
   },
-  "vscode-run-rspec-file.custom-command": "docker compose exec web rspec"
+  "rufo.exe": "rufo",
+  "rufo.useBundler": false,
+  "files.insertFinalNewline": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo",
+    "editor.formatOnPaste": true
+  },
+  "vscode-run-rspec-file.custom-command": "docker compose exec web rspec",
+  "liveshare.languages.allowGuestCommandControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.allowGuestDebugControl": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+  },
+  "window.zoomLevel": 1
 }

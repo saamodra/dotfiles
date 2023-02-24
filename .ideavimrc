@@ -66,7 +66,7 @@ map <leader>F <Plug>(easymotion-f)
 "   m	    Display the NERDTree menu
 " See  https://github.com/JetBrains/ideavim/wiki/NERDTree-support for details
 set NERDTree
-map <c-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 """ multiple-cursors plugin  --------------------------------
 " Emulates vim-multiple-cursors
@@ -143,10 +143,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <TAB> :action NextTab<CR>
 nnoremap <s-TAB> :action PreviousTab<CR>
 
-"nnoremap <Leader>e :action EditSourceInNewWindow<CR>
-"sethandler <D-n> a:vim
-"nnoremap <D-n> :action NextWindow<CR>
-
 nnoremap ;q :action CloseContent<CR>
 nnoremap ;a :action CloseAllEditors<CR>
 
@@ -157,6 +153,7 @@ set idearefactormode=keep
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap <leader>r :action Replace<CR>
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 
@@ -167,8 +164,7 @@ nnoremap <leader>zo :action ExpandAllRegions<CR>
 
 nnoremap <leader>c :action CommentByLineComment<CR>
 
-nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <Leader>= :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
 
 nnoremap ;r :action RecentFiles<CR>
@@ -181,8 +177,6 @@ nnoremap gE :action GotoPreviousError<CR>
 nnoremap <leader>s :write<CR>
 
 """ Searching and Source Code Navigation
-"set incsearch
-
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <leader>u :action FindUsages<CR>
 
