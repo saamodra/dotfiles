@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+import urllib.request
+import json
+import datetime
+
+CITY = 'Ponorogo'
+COUNTRY = 'ID'
+FIRST_PRAY = 'Imsak'
+
+url = 'https://api.aladhan.com/timingsByCity?city=%s&country=%s' % (CITY, COUNTRY)
+with urllib.request.urlopen(url) as response:
+    html = response.read()
+
+timings = json.loads(html)['data']['timings']
+del timings['Sunset']
+del timings['Midnight']
+del timings['Firstthird']
+del timings['Lastthird']
+
+current_time = datetime.datetime.now().time()
+current_prayer = [FIRST_PRAY, timings[FIRST_PRAY]]
+next_prayer = [FIRST_PRAY, timings[FIRST_PRAY]]
+
+sorted_timings = sorted(timings.items(), key=lambda d: d[1])
+
+for name, time in sorted_timings:
+    parsedTime = datetime.datetime.strptime(timings[name], "%H:%M").time()
+
+    if current_time >= parsedTime:
+        current_prayer = [name, time]
+
+    if current_time <= parsedTime:
+        next_prayer = [name, time]
+        break
+
+print("%s at %s" % (next_prayer[0], next_prayer[1]))
