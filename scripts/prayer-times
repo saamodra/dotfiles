@@ -2,11 +2,23 @@
 
 import urllib.request
 import json
-import datetime
+from datetime import datetime
+from datetime import timedelta
 
 CITY = 'Ponorogo'
 COUNTRY = 'ID'
 FIRST_PRAY = 'Imsak'
+ADDED_MINUTES = 2
+
+
+def time_adjuster(prayer_time, adjuster):
+    parsed_time = datetime.strptime(prayer_time, "%H:%M")
+    adjusted_prayer_time = parsed_time + timedelta(minutes=adjuster)
+    prayer_time_int = adjusted_prayer_time.time()
+    prayer_time_text = adjusted_prayer_time.strftime("%H:%M")
+
+    return [prayer_time_int, prayer_time_text]
+
 
 url = 'https://api.aladhan.com/timingsByCity?city=%s&country=%s' % (CITY, COUNTRY)
 with urllib.request.urlopen(url) as response:
@@ -18,20 +30,20 @@ del timings['Midnight']
 del timings['Firstthird']
 del timings['Lastthird']
 
-current_time = datetime.datetime.now().time()
-current_prayer = [FIRST_PRAY, timings[FIRST_PRAY]]
-next_prayer = [FIRST_PRAY, timings[FIRST_PRAY]]
+current_time = datetime.now().time()
+current_prayer = [FIRST_PRAY, time_adjuster(timings[FIRST_PRAY], ADDED_MINUTES)[1]]
+next_prayer = [FIRST_PRAY, time_adjuster(timings[FIRST_PRAY], ADDED_MINUTES)[1]]
 
 sorted_timings = sorted(timings.items(), key=lambda d: d[1])
 
 for name, time in sorted_timings:
-    parsedTime = datetime.datetime.strptime(timings[name], "%H:%M").time()
+    prayer_time = time_adjuster(timings[name], ADDED_MINUTES)
 
-    if current_time >= parsedTime:
-        current_prayer = [name, time]
+    if current_time >= prayer_time[0]:
+        current_prayer = [name, prayer_time[1]]
 
-    if current_time <= parsedTime:
-        next_prayer = [name, time]
+    if current_time <= prayer_time[0]:
+        next_prayer = [name, prayer_time[1]]
         break
 
 print("%s at %s" % (next_prayer[0], next_prayer[1]))
