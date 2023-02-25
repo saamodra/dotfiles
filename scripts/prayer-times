@@ -4,46 +4,81 @@ import urllib.request
 import json
 from datetime import datetime
 from datetime import timedelta
+from pathlib import Path
 
 CITY = 'Ponorogo'
 COUNTRY = 'ID'
 FIRST_PRAY = 'Imsak'
 ADDED_MINUTES = 2
+CONFIG_DIR = Path.home() / '.config/prayer-times/'
+CONFIG_FILE = CONFIG_DIR / 'config.json'
 
 
-def time_adjuster(prayer_time, adjuster):
-    parsed_time = datetime.strptime(prayer_time, "%H:%M")
-    adjusted_prayer_time = parsed_time + timedelta(minutes=adjuster)
-    prayer_time_int = adjusted_prayer_time.time()
-    prayer_time_text = adjusted_prayer_time.strftime("%H:%M")
+def time_adjuster(pray_time, adjuster):
+    parsed_time = datetime.strptime(pray_time, "%H:%M")
+    adjusted_pray_time = parsed_time + timedelta(minutes=adjuster)
+    pray_time_int = adjusted_pray_time.time()
+    prayer_time_text = adjusted_pray_time.strftime("%H:%M")
 
-    return [prayer_time_int, prayer_time_text]
+    return {'time': pray_time_int, 'text': prayer_time_text}
 
 
-url = 'https://api.aladhan.com/timingsByCity?city=%s&country=%s' % (CITY, COUNTRY)
-with urllib.request.urlopen(url) as response:
-    html = response.read()
+def get_config(config_dir, config_file):
+    config_dir.mkdir(parents=True, exist_ok=True)
+    config_file.touch(exist_ok=True)
 
-timings = json.loads(html)['data']['timings']
-del timings['Sunset']
-del timings['Midnight']
-del timings['Firstthird']
-del timings['Lastthird']
+    prayer_data_file_cache = open(config_file)
+    json_data = prayer_data_file_cache.read() or '{}'
+    prayer_data_file_cache.close()
 
-current_time = datetime.now().time()
-current_prayer = [FIRST_PRAY, time_adjuster(timings[FIRST_PRAY], ADDED_MINUTES)[1]]
-next_prayer = [FIRST_PRAY, time_adjuster(timings[FIRST_PRAY], ADDED_MINUTES)[1]]
+    return json.loads(json_data)
 
-sorted_timings = sorted(timings.items(), key=lambda d: d[1])
 
-for name, time in sorted_timings:
-    prayer_time = time_adjuster(timings[name], ADDED_MINUTES)
+def refresh_cache(config_file, city, country):
+    url = 'https://api.aladhan.com/timingsByCity?city=%s&country=%s' % (city, country)
+    with urllib.request.urlopen(url) as response:
+        html = response.read()
 
-    if current_time >= prayer_time[0]:
-        current_prayer = [name, prayer_time[1]]
+    prayer_data = json.loads(html)['data']
 
-    if current_time <= prayer_time[0]:
-        next_prayer = [name, prayer_time[1]]
-        break
+    with open(config_file, 'w+', encoding='utf-8') as f:
+        json.dump(prayer_data, f, ensure_ascii=False, indent=4)
 
-print("%s at %s" % (next_prayer[0], next_prayer[1]))
+
+def cache_check():
+    current_date_formatted = datetime.now().strftime("%d %b %Y")
+    config = get_config(CONFIG_DIR, CONFIG_FILE)
+
+    is_config_empty = 'date' not in config
+    is_version_outdated = 'date' in config and config['date']['readable'] != current_date_formatted
+
+    if is_config_empty or is_version_outdated:
+        refresh_cache(CONFIG_FILE, CITY, COUNTRY)
+
+
+def get_prayer_times():
+    config = get_config(CONFIG_DIR, CONFIG_FILE)
+
+    timings = config['timings']
+    del timings['Sunset']
+    del timings['Midnight']
+    del timings['Firstthird']
+    del timings['Lastthird']
+
+    current_time = datetime.now().time()
+    next_prayer = {'name': FIRST_PRAY, 'time': time_adjuster(timings[FIRST_PRAY], ADDED_MINUTES)['text']}
+
+    sorted_timings = sorted(timings.items(), key=lambda d: d[1])
+
+    for name, time in sorted_timings:
+        prayer_time = time_adjuster(timings[name], ADDED_MINUTES)
+
+        if current_time <= prayer_time['time']:
+            next_prayer = {'name': name, 'time': prayer_time['text']}
+            break
+
+    return next_prayer
+
+
+next_prayer_times = get_prayer_times()
+print("%s at %s" % (next_prayer_times['name'], next_prayer_times['time']))
