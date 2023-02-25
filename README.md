@@ -12,6 +12,7 @@ This is Sam's workspace configurations backup
 * Polybar (a nice status bar)
 * Vscode-neovim (integrate neovim and vscode keybindings)
 * Rofimoji (app launcher)
+* Ranger (terminal file manager)
 * Ideavim (vimrc for jetbrains)
 * Zshrc, Bashrc, and profile (terminal configurations)
 * Antigenrc (package manager for zsh)
