@@ -6,6 +6,7 @@ export PATH="$PATH:$HOME/.rvm/bin:/home/woi/App/git-duet"
 
 export EDITOR="lvim"
 export BROWSER="google-chrome"
+export MAX_RENDERED_HEIGHT=54
 
 alias fm="nnn"
 alias gdcn!="git duet-commit --amend --no-edit"
