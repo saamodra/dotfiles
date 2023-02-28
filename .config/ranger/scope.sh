@@ -111,6 +111,14 @@ _handle_text() {
 
 handle_extension() {
   case "${FILE_EXTENSION_LOWER}" in
+    tar|gz)
+        tar -tf "${FILE_PATH}" | tree --fromfile && exit 5
+        exit 1
+        ;;
+    zip)
+        unzip -l -- "${FILE_PATH}" | awk 'FNR>3 {$1=$2=$3=""; print substr($0,4)}' | tree --fromfile && exit 5
+        exit 1
+        ;;
     # Archive
     a | ace | alz | arc | arj | bz | bz2 | cab | cpio | deb | gz | jar | lha | lz | lzh | lzma | lzo | \
       rpm | rz | t7z | tar | tbz | tbz2 | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip)
