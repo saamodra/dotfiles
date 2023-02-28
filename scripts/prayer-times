@@ -57,6 +57,7 @@ def cache_check():
 
 
 def get_prayer_times():
+    cache_check()
     config = get_config(CONFIG_DIR, CONFIG_FILE)
 
     timings = config['timings']
