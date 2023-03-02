@@ -56,8 +56,9 @@ hide_edge_borders both
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+i exec rofi -modi "emoji:/usr/local/bin/rofimoji" -show emoji
+# bindsym $mod+d exec 
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher.sh
+bindsym $mod+Shift+i exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher-emoji.sh
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -240,7 +241,7 @@ gaps outer $outer_gaps
 exec_always flameshot
 
 # Set desktop wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpapers/japan-room.jpg
+exec_always feh --bg-fill ~/Pictures/Wallpapers/598236.png
 exec_always ~/.config/polybar/forest/launch.sh
 
 # Bar and window styling

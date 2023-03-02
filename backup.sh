@@ -12,6 +12,7 @@ configurations=(
   "~/.config/ranger ./.config"
 	"~/.config/bumblebee-status/config ./.config/bumblebee-status/config"
 	"~/.config/betterlockscreen/betterlockscreenrc ./.config/betterlockscreen/betterlockscreenrc"
+  "~/.config/rofi ./.config"
 	"~/.config/rofimoji.rc ./.config/rofimoji.rc"
 	"~/.antigenrc .antigenrc"
 	"~/.bashrc .bashrc"

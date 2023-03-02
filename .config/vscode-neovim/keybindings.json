@@ -328,4 +328,8 @@
     "command": "-editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "alt+m",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
 ]
