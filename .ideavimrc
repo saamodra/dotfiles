@@ -1,6 +1,7 @@
 set so=5 " Keep few lines visible when scrolling
 set number relativenumber " Set relative line numbers
-set timeoutlen=400
+set notimeout
+set timeoutlen=5000
 
 """ Editing and Reloading the Config
 set clipboard+=unnamed
@@ -22,7 +23,7 @@ set surround
 
 """ argtextobj  Plugin  --------------------------------
 " Emulates argtextobj. Provides a text-object 'a' for function arguments
-" Text object
+
 " ai
 " aa
 " See https://www.vim.org/scripts/script.php?script_id=2699 for details
@@ -116,6 +117,13 @@ set clipboard+=ideaput
 set so=5 " Keep few lines visible when scrolling
 set relativenumber " Set relative line numbers
 
+"" which-key
+set which-key
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_primary_color = '#e64553'
+let g:qs_secondary_color = '#fe640b'
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '{', '}', '[', ']', '<', '>']
+
 """ The Escape button
 map <C-c> <Esc>
 
@@ -174,8 +182,6 @@ nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
-nnoremap <leader>s :write<CR>
-
 """ Searching and Source Code Navigation
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <leader>u :action FindUsages<CR>
@@ -196,6 +202,13 @@ nnoremap gf :action Forward<CR>
 """ Tool windows
 nnoremap <M-p> :action JumpToLastWindow<CR>
 nnoremap <M-x> :action HideAllWindows<CR>
+map <leader>sg <Action>(ActivateCommitToolWindow)
+map <leader>se <Action>(ActivateProjectToolWindow)
+map <leader>sb <Action>(Bookmarks.ToolWindow.PopupMenu)
+map <leader>sh <Action>(HideSideWindows)
+map <leader>bt <Action>(ToggleBookmark)
+map <leader>bj <Action>(GotoNextBookmark)
+map <leader>bk <Action>(GotoPreviousBookmark)
 
 """ Running and Debugging
 nnoremap ,r :action ContextRun<CR>
