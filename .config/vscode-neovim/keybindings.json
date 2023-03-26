@@ -332,4 +332,36 @@
     "key": "alt+m",
     "command": "workbench.action.toggleMaximizedPanel"
   },
+  {
+    "key": "ctrl+alt+d",
+    "command": "liveshare.focusParticipants"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "workbench.action.moveEditorLeftInGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+pageup",
+    "command": "-workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+alt+o",
+    "command": "workbench.action.moveEditorRightInGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+pagedown",
+    "command": "-workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+shift+f10",
+    "command": "extension.CompileRun",
+    "when": "editorLangId == 'c' || editorLangId == 'cc' || editorLangId == 'cpp'"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "-extension.CompileRun",
+    "when": "editorLangId == 'c' || editorLangId == 'cc' || editorLangId == 'cpp'"
+  },
 ]

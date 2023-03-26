@@ -5,6 +5,8 @@ set so=5 " Keep few lines visible when scrolling
 set number relativenumber " Set relative line numbers
 set timeoutlen=400
 
+Plug 'tpope/vim-surround'
+
 " VSCode
 function! s:split(...) abort
     let direction = a:1
@@ -78,7 +80,11 @@ nnoremap <C-o> <Cmd>Tabnext<CR>
 " Neovim MultiCursor
 nnoremap <C-n> <Cmd>VMSearch<CR>
 xnoremap <C-n> <Cmd>VMSearch<CR>
-  
+
+" xmap gc  <Plug>VSCodeCommentary
+" nmap gc  <Plug>VSCodeCommentary
+" omap gc  <Plug>VSCodeCommentary
+" nmap gcc <Plug>VSCodeCommentaryLine
 
 " Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
 xnoremap <silent> <C-/> :call Comment()<CR>

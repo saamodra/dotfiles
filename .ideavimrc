@@ -182,12 +182,19 @@ nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
+" Alt+j/k for autocompletion popup
+inoremap <A-j> <C-n>
+inoremap <A-k> <C-p>
+
+" Show hoverdoc
+map <leader>h <Action>(ShowErrorDescription)
+
 """ Searching and Source Code Navigation
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <leader>u :action FindUsages<CR>
 
 "nnoremap <leader>s :action GotoRelated<CR>
-nnoremap <leader>h :action CallHierarchy<CR>
+"nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <c-s> :action FileStructurePopup<CR>
 nnoremap gs :action GotoSymbol<CR>
@@ -202,6 +209,7 @@ nnoremap gf :action Forward<CR>
 """ Tool windows
 nnoremap <M-p> :action JumpToLastWindow<CR>
 nnoremap <M-x> :action HideAllWindows<CR>
+nnoremap <M-m> :action MaximizeToolWindow<CR>
 map <leader>sg <Action>(ActivateCommitToolWindow)
 map <leader>se <Action>(ActivateProjectToolWindow)
 map <leader>sb <Action>(Bookmarks.ToolWindow.PopupMenu)

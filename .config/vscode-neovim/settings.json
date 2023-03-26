@@ -9,19 +9,21 @@
   "editor.cursorWidth": 2,
   "editor.renderWhitespace": "all",
   "editor.snippetSuggestions": "top",
-  "editor.lineNumbers": "relative",
   "workbench.startupEditor": "newUntitledFile",
   "editor.glyphMargin": true,
   "workbench.editor.enablePreview": false,
   "explorer.confirmDragAndDrop": false,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "editor.wordWrap": "on",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
   },
   "javascript.validate.enable": false,
   // MacOS Only Settings.
@@ -60,7 +62,6 @@
     "indent_with_tabs": false
   },
   "liveServer.settings.donotShowInfoMsg": true,
-  "editor.detectIndentation": false,
   "eslint.run": "onType",
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
@@ -426,6 +427,12 @@
       "args": ":noh<CR>"
     },
     {
+      "key": "r",
+      "name": "Open Recent",
+      "type": "command",
+      "command": "workbench.action.openRecent"
+    },
+    {
       "key": "s",
       "name": "Search...",
       "type": "bindings",
@@ -672,7 +679,7 @@
   "oneDarkPro.editorTheme": "One Dark Pro",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
-  "editor.fontFamily": "'JetBrains Mono NF', Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrainsMono NF', Hack, Menlo, Monaco, 'Courier New', monospace",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -805,5 +812,6 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "typescript.tsserver.log": "verbose"
 }

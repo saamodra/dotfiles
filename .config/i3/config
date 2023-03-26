@@ -207,8 +207,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
 bindcode 152 exec --no-startup-id ~/scripts/sink-switch.sh --speakers
 bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
 
+# Homebridge Fan Toggle
+bindcode 127 exec "~/scripts/fan-switch.sh"
+
 # Spotify Controls
-bindcode 127 exec "~/App/spotify_control playpause"
 bindcode 75 exec "~/App/spotify_control next"
 bindcode 74 exec "~/App/spotify_control playpause"
 bindcode 73 exec "~/App/spotify_control previous"
@@ -227,6 +229,8 @@ for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="xdg-desktop-portal-gnome"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
 for_window [title=".*Emulator.*"] floating enable
+for_window [title=".*TextBlaze.*" class="Brave-browser"] floating enable, move position mouse
+# for_window [title="^\/*"] floating enable
 for_window [class="^.*"] border pixel 2
 
 # Gap settings
