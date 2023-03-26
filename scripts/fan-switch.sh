@@ -6,9 +6,10 @@
 homebridge_url="http://192.168.2.105:8581"
 device_id="26614f2d9d2d0c609a0385473f032573beb7e469488da75f87ce267ecaa088e3"
 fan_status_conf=~/.config/homebridge/fan_status.json
+auth_conf=~/.config/homebridge/auth.json
 
 setupEnv() {
-  access_token=$(cat ~/.config/homebridge/auth.json | jq -r '.access_token')
+  access_token=$(cat $auth_conf | jq -r '.access_token')
   fan_status=$(cat $fan_status_conf)
 
   if [ $fan_status -eq 1 ]
@@ -32,14 +33,9 @@ toggleFan() {
 setupEnv
 toggleFan $fan_status $access_token
 
-if [[ -n "$status_code" ]]
+if [[ $status_code -eq 401 ]]
 then
-  echo $fan_status > $fan_status_conf
-  exit 1
-fi
-
-if [ $status_code -eq 401 ]
-then
+  echo 'Forbidden'
   curl --location 'http://192.168.2.105:8581/api/auth/login' \
   --header 'Content-Type: application/json' \
   --data '{
@@ -47,9 +43,11 @@ then
     "password": "Samodra4566",
     "otp": ""
   }' \
-  -o auth.json
+  -o $auth_conf
 
   setupEnv
   toggleFan $fan_status $access_token
+else
+  echo $fan_status > $fan_status_conf
 fi
 
