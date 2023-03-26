@@ -56,10 +56,7 @@ def cache_check():
         refresh_cache(CONFIG_FILE, CITY, COUNTRY)
 
 
-def get_prayer_times():
-    cache_check()
-    config = get_config(CONFIG_DIR, CONFIG_FILE)
-
+def get_prayer_times(config):
     timings = config['timings']
     del timings['Sunset']
     del timings['Midnight']
@@ -81,5 +78,16 @@ def get_prayer_times():
     return next_prayer
 
 
-next_prayer_times = get_prayer_times()
-print("%s at %s" % (next_prayer_times['name'], next_prayer_times['time']))
+def main():
+    cache_check()
+
+    config = get_config(CONFIG_DIR, CONFIG_FILE)
+    next_prayer_times = get_prayer_times(config)
+
+    hijriah = config['date']['hijri']
+    date = hijriah['day'] + ' ' + hijriah['month']['en']
+
+    print("%s at %s | %s" % (next_prayer_times['name'], next_prayer_times['time'], date))
+
+
+main()

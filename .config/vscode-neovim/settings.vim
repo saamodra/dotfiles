@@ -81,14 +81,15 @@ nnoremap <C-o> <Cmd>Tabnext<CR>
 nnoremap <C-n> <Cmd>VMSearch<CR>
 xnoremap <C-n> <Cmd>VMSearch<CR>
 
-" xmap gc  <Plug>VSCodeCommentary
-" nmap gc  <Plug>VSCodeCommentary
-" omap gc  <Plug>VSCodeCommentary
-" nmap gcc <Plug>VSCodeCommentaryLine
+nnoremap <C-w>gd <Cmd>call VSCodeNotify('editor.action.revealDefinitionAside')<CR>
+xnoremap <C-w>gc <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
+nnoremap <C-w>gcc <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
+" xnoremap <silent> gc <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
+" nnoremap <silent> gcc <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
 
 " Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
-xnoremap <silent> <C-/> :call Comment()<CR>
-nnoremap <silent> <C-/> :call Comment()<CR>
+" xnoremap <silent> <C-/> :call Comment()<CR>
+" nnoremap <silent> <C-/> :call Comment()<CR>
 
 nnoremap <silent> <C-w>_ :<C-u>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>
 
