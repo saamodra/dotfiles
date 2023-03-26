@@ -16,7 +16,6 @@ configurations=(
   "~/.config/homebridge ./.config"
   "~/.config/dunst ./.config"
 	"~/.config/rofimoji.rc ./.config/rofimoji.rc"
-	"~/.fonts ./"
 	"~/.antigenrc .antigenrc"
 	"~/.bashrc .bashrc"
   "~/.ideavimrc .ideavimrc"
