@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 #
 source ~/.profile
 source ~/antigen.zsh
+source /etc/profile.d/gradle.sh
 
 antigen init ~/.antigenrc
 

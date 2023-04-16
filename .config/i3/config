@@ -219,7 +219,6 @@ bindsym $mod+Shift+s exec "flameshot gui"
 bindsym $mod+Ctrl+v exec "copyq toggle"
 
 # Set application window
-assign [class="Slack"] $ws1
 assign [class="Spotify"] $ws10
 
 # Set specific app to using floating window

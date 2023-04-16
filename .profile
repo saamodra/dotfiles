@@ -11,6 +11,7 @@ export MAX_RENDERED_HEIGHT=54
 alias fm="nnn"
 alias gdcn!="git duet-commit --amend --no-edit"
 alias gdc="git duet-commit"
+alias port-killer="/home/woi/scripts/port-killer.sh"
 alias rg="pipx run --spec ranger-fm ranger"
 
 # NNN Config

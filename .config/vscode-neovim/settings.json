@@ -25,6 +25,14 @@
     "editor.indentSize": 4,
     "editor.tabSize": 4
   },
+  "[php]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
+  "[c]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
   "javascript.validate.enable": false,
   // MacOS Only Settings.
   "terminal.integrated.macOptionIsMeta": true,
@@ -792,7 +800,6 @@
       "terminal.ansiBrightYellow": "#d19a66"
     }
   },
-  "workbench.activityBar.visible": false,
   "files.watcherExclude": {
     "**/.git": true,
     "**/node_modules": true,
@@ -800,6 +807,8 @@
   },
   "rufo.exe": "rufo",
   "rufo.useBundler": false,
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
   "files.insertFinalNewline": true,
   "[ruby]": {
     "editor.defaultFormatter": "jnbt.vscode-rufo",
@@ -812,6 +821,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
   },
+  "typescript.tsserver.log": "off",
   "window.zoomLevel": 1,
-  "typescript.tsserver.log": "verbose"
+  "workbench.activityBar.visible": false
 }
