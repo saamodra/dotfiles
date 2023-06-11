@@ -6,7 +6,7 @@ from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
 
-CITY = 'Ponorogo'
+CITY = 'Madiun'
 COUNTRY = 'ID'
 FIRST_PRAY = 'Imsak'
 ADDED_MINUTES = 2
@@ -35,7 +35,8 @@ def get_config(config_dir, config_file):
 
 
 def refresh_cache(config_file, city, country):
-    url = 'https://api.aladhan.com/timingsByCity?city=%s&country=%s' % (city, country)
+    current_date = datetime.now().strftime("%d-%m-%Y")
+    url = 'https://api.aladhan.com/v1/timingsByCity/%s?city=%s&country=%s' % (current_date, city, country)
     with urllib.request.urlopen(url) as response:
         html = response.read()
 
@@ -84,10 +85,10 @@ def main():
     config = get_config(CONFIG_DIR, CONFIG_FILE)
     next_prayer_times = get_prayer_times(config)
 
-    hijriah = config['date']['hijri']
-    date = hijriah['day'] + ' ' + hijriah['month']['en']
+    # hijriah = config['date']['hijri']
+    # date = hijriah['day'] + ' ' + hijriah['month']['en']
 
-    print("%s at %s | %s" % (next_prayer_times['name'], next_prayer_times['time'], date))
+    print("%s at %s" % (next_prayer_times['name'], next_prayer_times['time']))
 
 
 main()

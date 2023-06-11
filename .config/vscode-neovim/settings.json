@@ -823,5 +823,5 @@
   },
   "typescript.tsserver.log": "off",
   "window.zoomLevel": 1,
-  "workbench.activityBar.visible": false
+  "search.smartCase": true
 }

@@ -1,4 +1,3 @@
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:/home/woi/App/git-duet:$JAVA_HOME/bin"
 
@@ -13,6 +12,8 @@ alias gdcn!="git duet-commit --amend --no-edit"
 alias gdc="git duet-commit"
 alias port-killer="/home/woi/scripts/port-killer.sh"
 alias rg="pipx run --spec ranger-fm ranger"
+alias wa="watch"
+alias dcstop="~/scripts/docker-stop.sh"
 
 # NNN Config
 export NNN_BMS="h:~;D:~/Downloads;C:~/Downloads/Compressed"

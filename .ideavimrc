@@ -1,6 +1,6 @@
 set so=5 " Keep few lines visible when scrolling
-set number relativenumber " Set relative line numbers
 set notimeout
+set number
 set timeoutlen=5000
 
 """ Editing and Reloading the Config
@@ -115,7 +115,6 @@ Plug 'michaeljsmith/vim-indent-object'
 set clipboard+=unnamed " Clipboard sharing for Mac Os
 set clipboard+=ideaput
 set so=5 " Keep few lines visible when scrolling
-set relativenumber " Set relative line numbers
 
 "" which-key
 set which-key
