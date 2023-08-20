@@ -208,7 +208,8 @@ bindcode 152 exec --no-startup-id ~/scripts/sink-switch.sh --speakers
 bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
 
 # Homebridge Fan Toggle
-bindcode 127 exec "~/scripts/fan-switch.sh"
+set $fan_device_id aa1e07534f9514c83a7810de747864e28c8173f4c0f511ea359fd48a8a66846a
+bindcode 127 exec ~/scripts/toggle-switch.sh $fan_device_id
 
 # Spotify Controls
 bindcode 75 exec "~/App/spotify_control next"
@@ -244,8 +245,9 @@ gaps outer $outer_gaps
 exec_always flameshot
 
 # Set desktop wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpapers/598236.png
+exec_always feh --bg-fill ~/Pictures/Wallpapers/pxfuel-kuroshiro.jpg
 exec_always ~/.config/polybar/forest/launch.sh
+exec_always ~/scripts/auto-charge.sh
 
 # Bar and window styling
 set $bg-color 	         #2f343f

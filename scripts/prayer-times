@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
-import urllib.request
 import json
+from urllib.request import Request, urlopen
+from collections import OrderedDict
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
@@ -37,7 +38,13 @@ def get_config(config_dir, config_file):
 def refresh_cache(config_file, city, country):
     current_date = datetime.now().strftime("%d-%m-%Y")
     url = 'https://api.aladhan.com/v1/timingsByCity/%s?city=%s&country=%s' % (current_date, city, country)
-    with urllib.request.urlopen(url) as response:
+    headers = OrderedDict({
+        'Host': "api.aladhan.com",
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0'
+    })
+
+    req = Request(url, headers=headers)
+    with urlopen(req) as response:
         html = response.read()
 
     prayer_data = json.loads(html)['data']

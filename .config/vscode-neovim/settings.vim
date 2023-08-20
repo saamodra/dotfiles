@@ -5,8 +5,6 @@ set so=5 " Keep few lines visible when scrolling
 set number relativenumber " Set relative line numbers
 set timeoutlen=400
 
-Plug 'tpope/vim-surround'
-
 " VSCode
 function! s:split(...) abort
     let direction = a:1

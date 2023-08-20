@@ -29,6 +29,11 @@
     "editor.indentSize": 4,
     "editor.tabSize": 4
   },
+  "[blade.php]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
   "[c]": {
     "editor.indentSize": 4,
     "editor.tabSize": 4
@@ -823,5 +828,8 @@
   },
   "typescript.tsserver.log": "off",
   "window.zoomLevel": 1,
-  "search.smartCase": true
+  "search.smartCase": true,
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  }
 }
