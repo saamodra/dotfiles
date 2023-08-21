@@ -209,7 +209,7 @@ bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
 
 # Homebridge Fan Toggle
 set $fan_device_id aa1e07534f9514c83a7810de747864e28c8173f4c0f511ea359fd48a8a66846a
-bindcode 127 exec ~/scripts/toggle-switch.sh $fan_device_id
+bindcode 127 exec ~/scripts/toggle-switch.sh -d $fan_device_id
 
 # Spotify Controls
 bindcode 75 exec "~/App/spotify_control next"

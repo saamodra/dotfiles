@@ -40,6 +40,10 @@ case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+      # Switch off charger
+      charger_device_id="26614f2d9d2d0c609a0385473f032573beb7e469488da75f87ce267ecaa088e3"
+      ~/scripts/switch-off.sh $charger_device_id
+
 			systemctl poweroff
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
