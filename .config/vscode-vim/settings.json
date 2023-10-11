@@ -1,62 +1,16 @@
 {
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "/home/woi/.config/vscode-neovim/settings.vim",
-  "terminal.integrated.cwd": "",
-  "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
-  "editor.tabSize": 2,
-  "editor.lineHeight": 21,
-  "editor.fontSize": 12,
-  "editor.cursorStyle": "line",
-  "editor.cursorWidth": 2,
-  "editor.renderWhitespace": "all",
-  "editor.snippetSuggestions": "top",
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.glyphMargin": true,
-  "workbench.editor.enablePreview": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[json]": {
-    "editor.indentSize": 4,
-    "editor.tabSize": 4
-  },
-  "[php]": {
-    "editor.indentSize": 4,
-    "editor.tabSize": 4
-  },
   "[blade.php]": {
     "editor.defaultFormatter": "shufo.vscode-blade-formatter",
     "editor.indentSize": 4,
     "editor.tabSize": 4
   },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
   "[c]": {
     "editor.indentSize": 4,
     "editor.tabSize": 4
   },
-  "javascript.validate.enable": false,
-  // MacOS Only Settings.
-  "terminal.integrated.macOptionIsMeta": true,
-  "editor.semanticHighlighting.enabled": false,
-  "python.languageServer": "Pylance",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.mouseWheelZoom": true,
-  "workbench.productIconTheme": "fluent-icons",
-  "editor.cursorBlinking": "expand",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "javascript.format.semicolons": "insert",
-  "emmet.excludeLanguages": [
-    "markdown"
-  ],
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "workbench.editor.untitled.hint": "hidden",
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -70,44 +24,234 @@
     "editor.wordBasedSuggestions": false,
     "editor.defaultFormatter": "Dart-Code.dart-code"
   },
-  "dart.flutterSdkPath": "D:\\FLUTTER_SDK",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+  },
+  "[json]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
+  "[php]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo",
+    "editor.formatOnPaste": true
+  },
   "beautify.options": {
     "indent_size": 2,
     "indent_with_tabs": false
   },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "eslint.run": "onType",
+  "css.validate": false,
+  "dart.flutterSdkPath": "D:\\FLUTTER_SDK",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
     "source.organizeImports": false,
     "source.fixAll.eslint": false
   },
+  "editor.cursorBlinking": "expand",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'JetBrainsMono NF', Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 12,
+  "editor.formatOnSave": false,
+  "editor.glyphMargin": true,
+  "editor.lineHeight": 21,
+  "editor.mouseWheelZoom": true,
+  "editor.renderWhitespace": "all",
   "editor.rulers": [
     120
   ],
-  "editor.formatOnSave": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "[One Dark Pro]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "support.class.component.open.jsx",
+            "support.class.component.close.jsx",
+            "entity.name.function.js"
+          ],
+          "settings": {
+            "foreground": "#61afef"
+          }
+        },
+        {
+          "scope": [
+            "variable.other.constant.object.js",
+            "punctuation.section.embedded.begin.jsx",
+            "punctuation.section.embedded.end.jsx"
+          ],
+          "settings": {
+            "foreground": "#abb2bf"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.tag.jsx"
+          ],
+          "settings": {
+            "foreground": "#5c6370"
+          }
+        },
+        {
+          "scope": [
+            "variable.other.readwrite.js",
+            "variable.other.property.js",
+            "variable.parameter",
+            "variable.other.object.js"
+          ],
+          "settings": {
+            "foreground": "#56b6c2"
+          }
+        },
+        {
+          "scope": [
+            "entity.other.attribute-name.jsx"
+          ],
+          "settings": {
+            "foreground": "#e5c07b"
+          }
+        },
+        {
+          "scope": [
+            "keyword.operator.assignment.js",
+            "keyword.operator.assignment.jsx",
+            "string.unquoted.js",
+            "keyword.operator.typeof.js",
+            "meta.embedded.expression.js",
+            "constant.other.object.key.js",
+            "keyword.operator.logical.js"
+          ],
+          "settings": {
+            "foreground": "#c678dd"
+          }
+        },
+        {
+          "scope": [
+            "variable.other.constant.object.js"
+          ],
+          "settings": {
+            "foreground": "#e06c75"
+          }
+        }
+      ]
+    }
+  },
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "eslint.run": "onType",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.neovim": 1
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/tmp": true
+  },
   "git.autofetch": true,
   "git.enableSmartCommit": true,
-  "css.validate": false, // Disable css built-in lint
-  "stylelint.enable": true, // Enable sytlelint
-  "scss.validate": false,
-  "yaml.schemas": {
-    "file:///home/woi/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
-  "redhat.telemetry.enabled": true,
-  "explorer.confirmDelete": false,
-  "editor.accessibilitySupport": "off",
-  "workbench.iconTheme": "material-icon-theme",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "gitlens.currentLine.enabled": true,
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
     "switch:command"
   ],
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.enableMultiLinePasteWarning": false, // Disable scss lint (optional if using scss)
+  "gitlens.hovers.currentLine.over": "line",
+  "javascript.format.semicolons": "insert",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.languages.allowGuestCommandControl": true,
+  "oneDarkPro.editorTheme": "One Dark Pro",
+  "python.languageServer": "Pylance",
+  "redhat.telemetry.enabled": true,
+  "ruby.specCommand": "docker compose exec web rspec",
+  "rufo.exe": "rufo",
+  "rufo.useBundler": false,
+  "scss.validate": false,
+  "search.smartCase": true,
+  "stylelint.enable": true,
+  "terminal.integrated.cwd": "",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "workbench.colorTheme": "One Dark Pro",
-  "whichkey.sortOrder": "alphabetically",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
+  "terminal.integrated.macOptionIsMeta": true,
+  "typescript.tsserver.log": "off",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<C-o>"
+      ],
+      "commands": [
+        ":tabn"
+      ]
+    },
+    {
+      "before": [
+        "<C-i>"
+      ],
+      "commands": [
+        ":tabp"
+      ]
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ],
+      "silent": true
+    }
+  ],
   "whichkey.bindings": [
     {
       "key": ";",
@@ -686,96 +830,9 @@
       "command": "workbench.action.toggleZenMode"
     }
   ],
-  "workbench.editor.showTabs": true,
-  "gitlens.currentLine.enabled": true,
-  "gitlens.hovers.currentLine.over": "line",
-  "editor.suggestSelection": "first",
-  "oneDarkPro.editorTheme": "One Dark Pro",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.fontFamily": "'JetBrainsMono NF', Hack, Menlo, Monaco, 'Courier New', monospace",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
+  "whichkey.sortOrder": "alphabetically",
   "window.menuBarVisibility": "toggle",
-  "editor.tokenColorCustomizations": {
-    "[One Dark Pro]": {
-      "textMateRules": [
-        {
-          "scope": [
-            "support.class.component.open.jsx",
-            "support.class.component.close.jsx",
-            "entity.name.function.js"
-          ],
-          "settings": {
-            "foreground": "#61afef"
-          }
-        },
-        {
-          "scope": [
-            "variable.other.constant.object.js",
-            "punctuation.section.embedded.begin.jsx",
-            "punctuation.section.embedded.end.jsx"
-          ],
-          "settings": {
-            "foreground": "#abb2bf"
-          }
-        },
-        {
-          "scope": [
-            "punctuation.definition.tag.jsx"
-          ],
-          "settings": {
-            "foreground": "#5c6370"
-          }
-        },
-        {
-          "scope": [
-            "variable.other.readwrite.js",
-            "variable.other.property.js",
-            "variable.parameter",
-            "variable.other.object.js"
-          ],
-          "settings": {
-            "foreground": "#56b6c2"
-          }
-        },
-        {
-          "scope": [
-            "entity.other.attribute-name.jsx"
-          ],
-          "settings": {
-            "foreground": "#e5c07b"
-          }
-        },
-        {
-          "scope": [
-            "keyword.operator.assignment.js",
-            "keyword.operator.assignment.jsx",
-            "string.unquoted.js",
-            "keyword.operator.typeof.js",
-            "meta.embedded.expression.js",
-            "constant.other.object.key.js",
-            "keyword.operator.logical.js"
-          ],
-          "settings": {
-            "foreground": "#c678dd"
-          }
-        },
-        {
-          "scope": [
-            "variable.other.constant.object.js"
-          ],
-          "settings": {
-            "foreground": "#e06c75"
-          }
-        }
-      ]
-    }
-  },
+  "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
     "[Default Dark+]": {
       "statusBar.background": "#2E2E2E",
@@ -806,36 +863,15 @@
       "terminal.ansiBrightYellow": "#d19a66"
     }
   },
-  "files.watcherExclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/tmp": true
-  },
-  "rufo.exe": "rufo",
-  "rufo.useBundler": false,
-  "ruby.useLanguageServer": true,
-  "ruby.intellisense": "rubyLocate",
-  "files.insertFinalNewline": true,
-  "[ruby]": {
-    "editor.defaultFormatter": "jnbt.vscode-rufo",
-    "editor.formatOnPaste": true
-  },
-  "ruby.specCommand": "docker compose exec web rspec",
-  "vscode-run-rspec-file.custom-command": "docker compose exec web rspec",
-  "liveshare.languages.allowGuestCommandControl": true,
-  "liveshare.allowGuestTaskControl": true,
-  "liveshare.allowGuestDebugControl": true,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
-  },
-  "typescript.tsserver.log": "off",
-  "window.zoomLevel": 1,
-  "search.smartCase": true,
-  "[blade]": {
-    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.empty.hint": "hidden",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "yaml.schemas": {
+    "file:///home/woi/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   }
 }
