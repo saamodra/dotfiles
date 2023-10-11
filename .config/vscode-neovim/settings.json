@@ -1,6 +1,7 @@
 {
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.linux": "/home/woi/.config/vscode-neovim/settings.vim",
+  "terminal.integrated.cwd": "",
   "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
   "editor.tabSize": 2,
   "editor.lineHeight": 21,
@@ -819,6 +820,7 @@
     "editor.defaultFormatter": "jnbt.vscode-rufo",
     "editor.formatOnPaste": true
   },
+  "ruby.specCommand": "docker compose exec web rspec",
   "vscode-run-rspec-file.custom-command": "docker compose exec web rspec",
   "liveshare.languages.allowGuestCommandControl": true,
   "liveshare.allowGuestTaskControl": true,
@@ -831,5 +833,9 @@
   "search.smartCase": true,
   "[blade]": {
     "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   }
 }

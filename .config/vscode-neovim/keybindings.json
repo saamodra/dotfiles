@@ -195,13 +195,13 @@
     "command": "-workbench.action.files.newUntitledFile"
   },
   {
-    "command": "extension.runLineOnRspec",
+    "command": "extension.runSpecLine",
     "key": "ctrl+shift+f10",
     "when": "editorLangId == 'ruby'"
   },
   {
-    "key": "ctrl+shift+f10",
     "command": "extension.runJest",
+    "key": "ctrl+shift+f10",
     "when": "editorLangId == 'javascript' || editorLangId == 'javascriptreact' || editorLangId == 'typescript'"
   },
   {

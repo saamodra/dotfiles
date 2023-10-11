@@ -39,7 +39,7 @@ if [ -z "$device_id" ]; then
   exit 1
 fi
 
-HOMEBRIDGE_URL="http://192.168.2.105:8581"
+HOMEBRIDGE_URL="http://localhost:8581"
 DEVICE_STATUS_CONF="$HOME/.config/homebridge/status_$device_id.json"
 AUTH_CONF="$HOME/.config/homebridge/auth.json"
 
@@ -74,14 +74,14 @@ toggleDevice $device_status $access_token
 if [[ $status_code -eq 401 ]]
 then
   echo 'Forbidden, requesting new access token.'
-  curl --location 'http://192.168.2.105:8581/api/auth/login' \
+  curl --location "$HOMEBRIDGE_URL/api/auth/login" \
   --header 'Content-Type: application/json' \
   --data '{
     "username": "samodra",
     "password": "5jlkW237M95ISes*",
     "otp": ""
   }' \
-  -o $auth_conf
+  -o $AUTH_CONF
 
   setupEnv
   toggleDevice $device_status $access_token

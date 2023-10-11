@@ -14,6 +14,8 @@ alias port-killer="/home/woi/scripts/port-killer.sh"
 alias rg="pipx run --spec ranger-fm ranger"
 alias wa="watch"
 alias dcstop="~/scripts/docker-stop.sh"
+alias kg="k get"
+alias kd="k describe"
 
 # NNN Config
 export NNN_BMS="h:~;D:~/Downloads;C:~/Downloads/Compressed"
@@ -26,3 +28,6 @@ PATH=/home/woi/.cargo/bin:/home/woi/.rvm/gems/ruby-3.0.0/bin:/home/woi/.rvm/gems
 # Added by Toolbox App
 export PATH="$PATH:/home/woi/.local/share/JetBrains/Toolbox/scripts"
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
