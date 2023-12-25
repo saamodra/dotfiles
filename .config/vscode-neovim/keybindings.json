@@ -290,6 +290,10 @@
     "key": "ctrl+h"
   },
   {
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl+l"
+  },
+  {
     "command": "-showNextParameterHint",
     "key": "ctrl+n",
     "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"

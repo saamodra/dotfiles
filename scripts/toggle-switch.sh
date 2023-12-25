@@ -4,10 +4,11 @@
 # Notes:
 # * To get device id, we need to call homebridge API accessories path
 #   and get uniqueId of specific device
+#   Ex: 
+#   curl 'http://localhost:8581/api/accessories' \
+#    --header "Authorization: Bearer $access_token" \
+#    --header 'Content-Type: application/json' | jq
 #
-
-# kadonio_sp01_device_id="aa1e07534f9514c83a7810de747864e28c8173f4c0f511ea359fd48a8a66846a"
-# kadonio_sp02_device_id="26614f2d9d2d0c609a0385473f032573beb7e469488da75f87ce267ecaa088e3"
 
 PROGNAME=$0
 

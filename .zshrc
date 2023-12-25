@@ -76,6 +76,7 @@ plugins=(
   git
   history
   kubectl
+  ubuntu
   zsh-autosuggestions
   zsh-syntax-highlighting
   z
@@ -150,3 +151,8 @@ export PATH="$PATH:$HOME/.rvm/bin:$HOME/.local/bin"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export PATH=$PATH:/home/woi/.spicetify

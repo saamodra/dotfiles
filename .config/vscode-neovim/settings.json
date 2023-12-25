@@ -21,7 +21,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.defaultFormatter": "Dart-Code.dart-code"
   },
   "[html]": {
@@ -42,8 +42,7 @@
     "editor.tabSize": 4
   },
   "[ruby]": {
-    "editor.defaultFormatter": "jnbt.vscode-rufo",
-    "editor.formatOnPaste": true
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
   "beautify.options": {
     "indent_size": 2,
@@ -54,9 +53,9 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.organizeImports": false,
-    "source.fixAll.eslint": false
+    "source.fixAll": "never",
+    "source.organizeImports": "never",
+    "source.fixAll.eslint": "never"
   },
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "line",
@@ -198,6 +197,7 @@
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": true,
   "ruby.specCommand": "docker compose exec web rspec",
+  "rubyLsp.rubyVersionManager": "rbenv",
   "rufo.exe": "rufo",
   "rufo.useBundler": false,
   "scss.validate": false,
@@ -832,7 +832,6 @@
   ],
   "whichkey.sortOrder": "alphabetically",
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
     "[Default Dark+]": {
       "statusBar.background": "#2E2E2E",
@@ -866,12 +865,12 @@
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": true,
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.showTabs": "multiple",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.schemas": {
     "file:///home/woi/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  }
+  },
+  "window.zoomLevel": 1
 }

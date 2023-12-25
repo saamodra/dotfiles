@@ -211,7 +211,7 @@ nnoremap <M-x> :action HideAllWindows<CR>
 nnoremap <M-m> :action MaximizeToolWindow<CR>
 map <leader>sg <Action>(ActivateCommitToolWindow)
 map <leader>se <Action>(ActivateProjectToolWindow)
-map <leader>sb <Action>(Bookmarks.ToolWindow.PopupMenu)
+map <leader>sb <Action>(Bookarks.ToolWindow.PopupMenu)
 map <leader>sh <Action>(HideSideWindows)
 map <leader>bt <Action>(ToggleBookmark)
 map <leader>bj <Action>(GotoNextBookmark)

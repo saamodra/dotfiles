@@ -99,3 +99,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+eval "$(~/.rbenv/bin/rbenv init - bash)"
