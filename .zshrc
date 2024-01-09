@@ -4,11 +4,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+ZSH_THEME="af-magic"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="cloud"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,8 +82,6 @@ plugins=(
   z
 )
 
-
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -112,11 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source ~/.profile
-source ~/antigen.zsh
+#source ~/antigen.zsh
 source /etc/profile.d/gradle.sh
 
-antigen init ~/.antigenrc
-
+#antigen init ~/.antigenrc
 export USER_ID=$(id -u)
 export GROUP_ID=$(id -g)
 
@@ -127,32 +124,16 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 export SSH_AUTH_SOCK=/run/user/${UID}/gnupg/S.gpg-agent.ssh
 
-alias docker-compose='docker compose'
-alias build-vidio='docker-compose run --rm web yarn build:fast'
-alias build-lite='docker-compose run --rm vidio-lite yarn build'
-alias build-all='build-lite && build-vidio'
-alias dc='docker-compose'
-alias dcrm='dc run --rm --use-aliases --service-ports'
-
-alias emulator='/home/woi/Android/Sdk/emulator/emulator'
-alias api_28='/home/woi/Android/Sdk/emulator/emulator -avd Pixel_3a_XL_API_28'
-alias api_29='/home/woi/Android/Sdk/emulator/emulator -avd Nexus_6_API_29'
-alias api_30='/home/woi/Android/Sdk/emulator/emulator -avd Pixel_2_API_30'
-alias api_31='/home/woi/Android/Sdk/emulator/emulator -avd Pixel_3a_XL_API_31'
-alias vpint='sudo openvpn ~/vpn/kmk-int.ovpn'
-alias lampp-start='sudo /opt/lampp/lampp start'
-alias gamend='git commit --amend --no-edit'
-alias vpprod='sudo openvpn ~/vpn/kmk-prod.ovpn'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/.local/bin"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export PATH=$PATH:/home/woi/.spicetify
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/Projects/x14/bin"

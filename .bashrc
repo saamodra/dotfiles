@@ -56,8 +56,6 @@ alias lampp-start='sudo /opt/lampp/lampp start'
 alias gamend='git commit --amend --no-edit'
 alias vpprod='sudo openvpn ~/vpn/kmk-prod.ovpn'
 
-eval "$(rbenv init -)"
-
 PATH="$HOME/.local/bin:$PATH"
 export PATH
 
@@ -93,10 +91,12 @@ export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 . "$HOME/.cargo/env"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-eval "$(~/.rbenv/bin/rbenv init - bash)"
+
+source "/etc/profile.d/rvm.sh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -31,7 +31,7 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.indentSize": 4,
@@ -42,7 +42,7 @@
     "editor.tabSize": 4
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp"
+    "editor.defaultFormatter": "jnbt.vscode-rufo"
   },
   "beautify.options": {
     "indent_size": 2,
@@ -186,7 +186,7 @@
     "switch:command"
   ],
   "gitlens.hovers.currentLine.over": "line",
-  "javascript.format.semicolons": "insert",
+  "javascript.format.semicolons": "remove",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
   "liveServer.settings.donotShowInfoMsg": true,
@@ -197,7 +197,8 @@
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": true,
   "ruby.specCommand": "docker compose exec web rspec",
-  "rubyLsp.rubyVersionManager": "rbenv",
+  "rubyLsp.rubyVersionManager": "rvm",
+  "rubyLsp.bundleGemfile": "/home/woi/ruby-extensions/Gemfile",
   "rufo.exe": "rufo",
   "rufo.useBundler": false,
   "scss.validate": false,
