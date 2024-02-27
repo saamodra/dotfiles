@@ -196,7 +196,7 @@
   "oneDarkPro.editorTheme": "One Dark Pro",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": true,
-  "ruby.specCommand": "docker compose exec web rspec",
+  "ruby.specCommand": "docker compose exec web ./bin/rspec",
   "rubyLsp.rubyVersionManager": "rvm",
   "rubyLsp.bundleGemfile": "/home/woi/ruby-extensions/Gemfile",
   "rufo.exe": "rufo",
