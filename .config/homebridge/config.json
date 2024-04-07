@@ -1,0 +1,74 @@
+{
+    "bridge": {
+        "name": "Homebridge 4815",
+        "username": "0E:E2:91:56:48:15",
+        "port": 51258,
+        "pin": "154-79-034",
+        "advertiser": "avahi"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        },
+        {
+            "devices": [
+                {
+                    "type": "Outlet",
+                    "name": "Laptop Charger",
+                    "id": "eb0bb63a741975a8b2jgds",
+                    "key": "?e4G3$MHqr_T:15t",
+                    "manufacturer": "Kadonio",
+                    "model": "KS-SP02"
+                },
+                {
+                    "type": "Outlet",
+                    "name": "Fan",
+                    "id": "eb30d90e5bd9018224vncu",
+                    "key": "RiWcNRQ90mk.kL5k",
+                    "manufacturer": "Kadonio",
+                    "model": "KS-SP01"
+                },
+                {
+                    "type": "SimpleLight",
+                    "name": "Room Lamp",
+                    "id": "1100430250029112bc08",
+                    "key": "#air=A$|[H9'P{ht",
+                    "manufacturer": "Bardi",
+                    "model": "9W Lamp",
+                    "dpPower": 20,
+                    "dpColorTemperature": 24,
+                    "dpMode": 21,
+                    "dpColor": 24,
+                    "colorFunction": "HSB",
+                    "scaleBrightness": 1000,
+                    "scaleWhiteColor": 1000
+                },
+                {
+                    "type": "SimpleLight",
+                    "name": "Table Lamp",
+                    "id": "ebfbe8337beb5e3c5a4nqs",
+                    "key": "VDDV*al60!)F`1hK",
+                    "manufacturer": "Himel",
+                    "model": "Smart Bulb",
+                    "dpPower": 20,
+                    "dpColorTemperature": 24,
+                    "dpMode": 21,
+                    "dpColor": 24,
+                    "colorFunction": "HSB",
+                    "scaleBrightness": 1000,
+                    "scaleWhiteColor": 1000
+                }
+            ],
+            "platform": "TuyaLan"
+        },
+        {
+            "name": "Google Smart Home",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imdvb2dsZS1vYXV0aDJ8MTA1OTc3OTYyMDU3OTA1MzY5NzIzIiwiaWF0IjoxNzAyODA5NzczfQ.D4A5bGQpgn4ucpDmLNgk8PacZgDRphGjFDSH8fIcVpg",
+            "notice": "Keep your token a secret!",
+            "platform": "google-smarthome"
+        }
+    ]
+}
