@@ -1,5 +1,8 @@
-# How to installl
+# How to install
+
+Run `:PlugInstall` in nvim
 ```
-git clone git@github.com:ata/nvim-config.git ~/.config/nvim
-nvim nvim +PlugInstall +qall
-```
+# Credit
+
+Modified from https://github.com/ata/nvim-config
+

@@ -3,6 +3,7 @@
 # List of configuration
 configurations=(
   "~/.config/tmux ./.config"
+  "~/.config/nvim ./.config"
 )
 
 IFS=""

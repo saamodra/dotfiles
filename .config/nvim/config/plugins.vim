@@ -5,6 +5,7 @@ call plug#begin()
 " Nerd commenter using default align left
 Plug 'scrooloose/nerdcommenter'
 let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 1
 
 " Plugins requiring no additional configuration or keymaps
 Plug 'tpope/vim-endwise'
@@ -91,16 +92,6 @@ augroup mkd
   autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
   autocmd BufNewFile,BufRead *.markdown set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
 augroup END
-
-" NERDTree for project drawer
-Plug 'scrooloose/nerdtree'
-let NERDTreeHijackNetrw = 0
-nmap <leader>g :NERDTreeToggle<CR>
-nmap <leader>G :NERDTreeFind<CR>
-let NERDTreeIgnore = ['\.pyc$']
-
-" NERDTree Plugin
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " GitGutter
 Plug 'airblade/vim-gitgutter'
@@ -193,6 +184,11 @@ nnoremap <Leader>fb <cmd>Telescope buffers<cr>
 nnoremap <Leader>fh <cmd>Telescope help_tags<cr>
 
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+nmap <leader>g :NvimTreeToggle<CR>
+nmap <leader>G :NvimTreeFindFile<CR>
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
