@@ -56,7 +56,7 @@ hide_edge_borders both
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec 
+# bindsym $mod+d exec
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher.sh
 bindsym $mod+Shift+i exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher-emoji.sh
 
@@ -242,10 +242,9 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 # Run automatically programs
+exec_always feh --bg-fill ~/Pictures/Wallpapers/pxfuel-kuroshiro.jpg
 exec_always flameshot
 
-# Set desktop wallpaper
-exec_always feh --bg-fill ~/Pictures/Wallpapers/pxfuel-kuroshiro.jpg
 exec_always ~/.config/polybar/forest/launch.sh
 exec_always ~/scripts/auto-charge.sh
 
@@ -267,7 +266,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command ~/.config/bumblebee-status/bumblebee-status 
+	status_command ~/.config/bumblebee-status/bumblebee-status
         tray_output eDP-1
         tray_padding 3
 

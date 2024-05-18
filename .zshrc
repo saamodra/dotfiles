@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="amuse"
+ZSH_THEME="robbyrussell"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -119,12 +119,11 @@ export GROUP_ID=$(id -g)
 
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_BUILDKIT=1
-export CLOUDSDK_PYTHON=/usr/bin/python3
+export CLOUDSDK_PYTHON=/usr/bin/python3.11
 export LD_LIBRARY_PATH=/usr/local/lib
 
 export SSH_AUTH_SOCK=/run/user/${UID}/gnupg/S.gpg-agent.ssh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -137,3 +136,9 @@ export PATH=$PATH:/home/woi/.spicetify
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/Projects/x14/bin"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="/home/woi/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

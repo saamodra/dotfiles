@@ -203,18 +203,8 @@
     "key": "ctrl+shift+alt+backspace"
   },
   {
-    "command": "liveshare.join",
-    "key": "ctrl+shift+alt+o",
-    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
-  },
-  {
     "command": "-liveshare.join",
     "key": "ctrl+alt+j",
-    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
-  },
-  {
-    "command": "liveshare.join",
-    "key": "ctrl+shift+alt+o",
     "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
   },
   {
@@ -388,5 +378,25 @@
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+i",
+    "command": "inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+o",
+    "command": "workbench.action.quickchat.toggle",
+    "when": "hasChatProvider"
+  },
+  {
+    "key": "ctrl+shift+alt+i",
+    "command": "-workbench.action.quickchat.toggle",
+    "when": "hasChatProvider"
   }
 ]

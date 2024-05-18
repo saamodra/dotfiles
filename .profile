@@ -8,6 +8,7 @@ alias gdc="git duet-commit"
 alias gamend='git commit --amend --no-edit'
 alias port-killer="$HOME/scripts/port-killer.sh"
 alias rg="pipx run --spec ranger-fm ranger"
+alias nvim="~/.local/bin/nvim"
 alias wa="watch"
 alias dcstop="~/scripts/docker-stop.sh"
 alias kg="k get"
@@ -38,6 +39,7 @@ export NNN_USE_EDITOR=1
 export PATH="$HOME/.cargo/bin:\
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:\
 /usr/games:/usr/local/games:/snap/bin:\
+/home/woi/.rvm/gems/ruby-3.1.4/bin:\
 $HOME/App/git-duet:\
 $HOME/.antigen/bundles/robbyrussell/oh-my-zsh/lib:\
 $HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:\

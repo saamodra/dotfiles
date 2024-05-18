@@ -8,9 +8,19 @@ do
       notify-send "Battery has reached above 80%!" "Stopped Charging!"
       ~/scripts/toggle-switch.sh -s 0 -d $CHARGER_DEVICE_ID
    elif [ $battery_level -le 30 ]; then
-      notify-send "Battery has reached below 30%!" "Started Charging!"
-      ~/scripts/toggle-switch.sh -s 1 -d $CHARGER_DEVICE_ID
+      startCharging
    fi
 
    sleep 300
 done
+
+
+startCharging() {
+   charging_status=$(acpi -a)
+
+   if [[ $charging_status =~ "off-line" ]]; then
+      notify-send "Battery has reached below 30%!" "Started Charging!"
+      ~/scripts/toggle-switch.sh -s 1 -d $CHARGER_DEVICE_ID
+   fi
+}
+

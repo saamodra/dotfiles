@@ -196,8 +196,10 @@
   "oneDarkPro.editorTheme": "One Dark Pro",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": true,
-  "ruby.specCommand": "docker compose exec web ./bin/rspec",
-  "rubyLsp.rubyVersionManager": "rvm",
+  "ruby.specCommand": "docker compose exec web rspec",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rvm"
+  },
   "rubyLsp.bundleGemfile": "/home/woi/ruby-extensions/Gemfile",
   "rufo.exe": "rufo",
   "rufo.useBundler": false,
@@ -872,6 +874,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "yaml.schemas": {
     "file:///home/woi/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
-  "window.zoomLevel": 1
+},
+"window.zoomLevel": 1,
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
