@@ -31,7 +31,7 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[json]": {
     "editor.indentSize": 4,
@@ -42,13 +42,13 @@
     "editor.tabSize": 4
   },
   "[ruby]": {
-    "editor.defaultFormatter": "jnbt.vscode-rufo"
   },
   "beautify.options": {
     "indent_size": 2,
     "indent_with_tabs": false
   },
   "css.validate": false,
+  "chat.editor.fontSize": 12,
   "dart.flutterSdkPath": "D:\\FLUTTER_SDK",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
@@ -60,7 +60,6 @@
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 2,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'JetBrainsMono NF', Hack, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 12,
   "editor.formatOnSave": false,
@@ -877,4 +876,8 @@
 },
 "window.zoomLevel": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
 }

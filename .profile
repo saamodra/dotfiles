@@ -1,4 +1,4 @@
-export EDITOR="lvim"
+export EDITOR="nvim"
 export BROWSER="google-chrome"
 export MAX_RENDERED_HEIGHT=54
 
@@ -60,6 +60,7 @@ $HOME/.config/rofi/scripts"
 
 # Added by Toolbox App
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+export DATABASE_URL="postgres://postgres:postgres@localhost:5432/doccano?sslmode=disable"
 
 
 # Generated for envman. Do not edit.

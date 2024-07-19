@@ -238,11 +238,6 @@
     "when": "editorTextFocus"
   },
   {
-    "command": "vscode-easymotion.jumpToWord",
-    "key": "alt+\\",
-    "when": "editorTextFocus"
-  },
-  {
     "command": "-vscode-easymotion.jumpToWord",
     "key": "alt+/",
     "when": "editorTextFocus"
@@ -398,5 +393,33 @@
     "key": "ctrl+shift+alt+i",
     "command": "-workbench.action.quickchat.toggle",
     "when": "hasChatProvider"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-extension.vim_ctrl+t",
+    "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.panel.chat.view.copilot.toggleVisibility",
+    "when": "editorTextFocus"
   }
 ]
