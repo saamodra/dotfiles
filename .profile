@@ -61,6 +61,7 @@ $HOME/.config/rofi/scripts"
 # Added by Toolbox App
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 export DATABASE_URL="postgres://postgres:postgres@localhost:5432/doccano_v3?sslmode=disable"
+# export DATABASE_URL="postgres://postgres:postgres@localhost:5432/ner_doccano?sslmode=disable"
 
 
 # Generated for envman. Do not edit.

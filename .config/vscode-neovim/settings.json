@@ -41,7 +41,15 @@
     "editor.indentSize": 4,
     "editor.tabSize": 4
   },
+  "[python]": {
+    "editor.indentSize": 4,
+    "editor.tabSize": 4
+  },
   "[ruby]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo",
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false
   },
   "beautify.options": {
     "indent_size": 2,
@@ -194,6 +202,7 @@
   "liveshare.languages.allowGuestCommandControl": true,
   "oneDarkPro.editorTheme": "One Dark Pro",
   "python.languageServer": "Pylance",
+  "pytest_runner.pytest_exec_docker": "docker compose run --rm -e FLASK_ENV=test web pytest",
   "redhat.telemetry.enabled": true,
   "ruby.specCommand": "docker compose exec web rspec",
   "rubyLsp.rubyVersionManager": {
@@ -871,6 +880,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
+  "yaml.customTags": ["!vault scalar"],
   "yaml.schemas": {
     "file:///home/woi/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
 },
@@ -879,5 +889,17 @@
   "window.commandCenter": false,
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  },
+  "remote.SSH.defaultExtensions": [
+    "gitpod.gitpod-remote-ssh"
+  ],
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
   },
 }

@@ -42,7 +42,7 @@ case $chosen in
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
 		      # Switch off charger
 		      ~/scripts/toggle-switch.sh -s 0 -d "26614f2d9d2d0c609a0385473f032573beb7e469488da75f87ce267ecaa088e3"
-			rclone sync ~/Documents/Personal/Secret.kdbx drive:Documents &
+			# rclone sync ~/Documents/Personal/Secret.kdbx drive:Documents
 			systemctl poweroff
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0

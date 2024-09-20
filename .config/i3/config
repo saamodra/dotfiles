@@ -249,7 +249,8 @@ exec_always flameshot
 exec_always ~/.config/polybar/forest/launch.sh
 exec_always ~/scripts/auto-charge.sh
 exec_always rclone sync drive:Documents/Secret.kdbx ~/Documents/Personal &
-exec_always ~/scripts/vps_backup_sync.sh &
+exec_always gio mount google-drive://samodra.me@gmail.com/
+# exec_always ~/scripts/vps_backup_sync.sh &
 
 # Bar and window styling
 set $bg-color 	         #2f343f
