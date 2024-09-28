@@ -4,7 +4,7 @@
 # Notes:
 # * To get device id, we need to call homebridge API accessories path
 #   and get uniqueId of specific device
-#   Ex: 
+#   Ex:
 #   curl 'http://localhost:8581/api/accessories' \
 #    --header "Authorization: Bearer $access_token" \
 #    --header 'Content-Type: application/json' | jq
