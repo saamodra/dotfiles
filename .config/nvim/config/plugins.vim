@@ -189,7 +189,8 @@ Plug 'nvim-tree/nvim-tree.lua'
 nmap <leader>g :NvimTreeToggle<CR>
 nmap <leader>G :NvimTreeFindFile<CR>
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'zbirenbaum/copilot.lua'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 call plug#end()
 
 filetype plugin indent on

@@ -223,6 +223,7 @@ bindsym $mod+Ctrl+v exec "copyq toggle"
 assign [class="Spotify"] $ws10
 
 # Set specific app to using floating window
+# Use xprop command
 for_window [class="xdman-Main"] floating enable
 for_window [class="Pycalendar.py"] floating enable, move position mouse, border pixel 0
 for_window [class="copyq"] floating enable, border pixel 0

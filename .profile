@@ -1,14 +1,11 @@
 export EDITOR="nvim"
-export BROWSER="google-chrome"
-export MAX_RENDERED_HEIGHT=54
+export BROWSER="microsoft-edge"
 
-alias fm="nnn"
 alias gdcn!="git duet-commit --amend --no-edit"
 alias gdc="git duet-commit"
 alias gamend='git commit --amend --no-edit'
 alias port-killer="$HOME/scripts/port-killer.sh"
-alias rg="pipx run --spec ranger-fm ranger"
-alias nvim="~/.local/bin/nvim"
+alias rg="ranger"
 alias wa="watch"
 alias dcstop="~/scripts/docker-stop.sh"
 alias kg="k get"
@@ -32,43 +29,13 @@ alias vpint='sudo openvpn ~/vpn/kmk-int.ovpn'
 alias vpprod='sudo openvpn ~/vpn/kmk-prod.ovpn'
 alias vpdev='sudo openvpn ~/vpn/kmk-dev.ovpn'
 
-# NNN Config
-export NNN_BMS="h:~;D:~/Downloads;C:~/Downloads/Compressed"
-export NNN_USE_EDITOR=1
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:"$HOME/Apps/bin"
+export PATH=$PATH:"$HOME/.local/share/gem/ruby/3.1.0/bin"
 
-export PATH="$HOME/.cargo/bin:\
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:\
-/usr/games:/usr/local/games:/snap/bin:\
-/home/woi/.rvm/gems/ruby-3.1.4/bin:\
-$HOME/App/git-duet:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/lib:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/docker:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:\
-$HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:\
-$HOME/.antigen/bundles/zsh-users/zsh-autosuggestions:\
-$HOME/.antigen/bundles/zsh-users/zsh-syntax-highlighting:\
-$HOME/.antigen/bundles/agkozak/zsh-z:\
-$HOME/.fzf/bin:$HOME/.local/bin:\
-$HOME/.cargo/env:\
-$GEM_HOME/bin:\
-$HOME/.cargo/env:\
-$JAVA_HOME/bin:\
-$HOME/.config/rofi/scripts"
+eval "$(~/.rbenv/bin/rbenv init -)"
+
 
 # Added by Toolbox App
-export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
-export DATABASE_URL="postgres://postgres:postgres@localhost:5432/doccano_v3?sslmode=disable"
-# export DATABASE_URL="postgres://postgres:postgres@localhost:5432/ner_doccano?sslmode=disable"
+export PATH="$PATH:/home/samodra/.local/share/JetBrains/Toolbox/scripts"
 
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
