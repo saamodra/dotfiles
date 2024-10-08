@@ -31,11 +31,24 @@ alias vpdev='sudo openvpn ~/vpn/kmk-dev.ovpn'
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:"$HOME/Apps/bin"
-export PATH=$PATH:"$HOME/.local/share/gem/ruby/3.1.0/bin"
+export PATH=$PATH:"$HOME/.local/share/gem/ruby/3.2.0/bin"
+export PATH=$PATH:"$HOME/.rbenv/bin"
 
-eval "$(~/.rbenv/bin/rbenv init -)"
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
-# Added by Toolbox App
-export PATH="$PATH:/home/samodra/.local/share/JetBrains/Toolbox/scripts"
-
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+eval "$(rbenv init -)"

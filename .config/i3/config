@@ -46,7 +46,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # hide border
 default_floating_border pixel 0
@@ -208,13 +208,13 @@ bindcode 152 exec --no-startup-id ~/scripts/sink-switch.sh --speakers
 bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
 
 # Homebridge Fan Toggle
-set $fan_device_id aa1e07534f9514c83a7810de747864e28c8173f4c0f511ea359fd48a8a66846a
+set $fan_device_id c6a01146752385d48cdf1a3c17b25a649b2a776a9c0d5cf0de9101bc18ff05f2
 bindcode 127 exec ~/scripts/toggle-switch.sh -d $fan_device_id
 
 # Spotify Controls
-bindcode 75 exec "~/App/spotify_control next"
-bindcode 74 exec "~/App/spotify_control playpause"
-bindcode 73 exec "~/App/spotify_control previous"
+# bindcode 75 exec ~/App/spotify_control next
+# bindcode 74 exec "~/App/spotify_control playpause"
+# bindcode 73 exec "~/App/spotify_control previous"
 
 bindsym $mod+Shift+s exec "flameshot gui"
 bindsym $mod+Ctrl+v exec "copyq toggle"
@@ -230,9 +230,9 @@ for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="PersepolisDM"] floating enable
 for_window [class="xdg-desktop-portal-gnome"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
+for_window [class="Gnome-terminal"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 for_window [title=".*TextBlaze.*" class="Brave-browser"] floating enable, move position mouse
-# for_window [title="^\/*"] floating enable
 for_window [class="^.*"] border pixel 2
 
 # Gap settings
@@ -244,13 +244,14 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 # Run automatically programs
-exec_always feh --bg-fill ~/Pictures/Wallpapers/pxfuel-kuroshiro.jpg
+exec --no-startup-id betterlockscreen -w dim
+exec_always feh --bg-fill ~/Pictures/catppuccin-wallpapers/minimalistic/darker_unicat.png
 exec_always flameshot
 
 exec_always ~/.config/polybar/forest/launch.sh
 exec_always ~/scripts/auto-charge.sh
-exec_always rclone sync drive:Documents/Secret.kdbx ~/Documents/Personal &
-exec_always gio mount google-drive://samodra.me@gmail.com/
+# exec_always rclone sync drive:Documents/Secret.kdbx ~/Documents/Personal &
+# exec_always gio mount google-drive://samodra.me@gmail.com/
 # exec_always ~/scripts/vps_backup_sync.sh &
 
 # Bar and window styling

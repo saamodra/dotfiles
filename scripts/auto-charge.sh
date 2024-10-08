@@ -1,5 +1,5 @@
 #!/bin/bash
-CHARGER_DEVICE_ID="d172cfc3f7f574bf67e8e61d8dbe5b8a670294e9120e8b248ff8d54f36048115"
+CHARGER_DEVICE_ID="26d7099045cc7e9c530096dcf84cae6b451bf4fe55baf91bd2f07e1c4eae66ac"
 
 battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`
 if [ $battery_level -le 30 ]; then

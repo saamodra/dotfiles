@@ -109,12 +109,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export USER_ID=$(id -u)
 export GROUP_ID=$(id -g)
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_BUILDKIT=1
-
-export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
+export SSH_AUTH_SOCK=/run/user/${UID}/gnupg/S.gpg-agent.ssh
 
 source ~/.profile
 
