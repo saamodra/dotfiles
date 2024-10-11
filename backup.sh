@@ -12,6 +12,7 @@ configurations=(
   "~/.config/bumblebee-status/config ./.config/bumblebee-status/config"
   "~/.config/betterlockscreen/betterlockscreenrc ./.config/betterlockscreen/betterlockscreenrc"
   "~/.config/rofi ./.config"
+  "~/.config/nvim ./.config"
   "~/.config/homebridge ./.config"
   "~/.config/dunst ./.config"
   "~/.config/alacritty ./.config"

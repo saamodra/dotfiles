@@ -139,14 +139,7 @@ let g:surround_45 = "<% \r %>"
 let g:surround_61 = "<%= \r %>"
 
 
-" Easy async RSpec running
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-dispatch'
-let g:rspec_command = "Dispatch rspec --format=progress --no-profile {spec}"
-nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
-nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
-nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
-nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
 " MultipleCursor
 Plug 'terryma/vim-multiple-cursors'
@@ -164,7 +157,7 @@ Plug 'cespare/vim-toml'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Locate test file
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -178,6 +171,7 @@ Plug 'ryanoasis/vim-devicons'
 " Find files using Telescope command-line sugar.
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 nnoremap <Leader>ff <cmd>Telescope find_files<cr>
 nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <Leader>fb <cmd>Telescope buffers<cr>
@@ -191,6 +185,18 @@ nmap <leader>G :NvimTreeFindFile<CR>
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+nmap gc :CopilotChat<CR>
+
+Plug 'APZelos/blamer.nvim'
+let g:blamer_enabled = 1
+
+let test#ruby#rspec#executable = 'docker compose exec web rspec'
+let test#javascript#jest#executable = 'docker compose exec web yarn test'
+" let g:test#neovim#start_normal = 1
+" let g:test#preserve_screen = 0
+" let g:test#basic#start_normal = 1
+tmap <C-o> <C-\><C-n>
+
 call plug#end()
 
 filetype plugin indent on
