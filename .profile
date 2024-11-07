@@ -17,6 +17,7 @@ alias build-lite='docker-compose run --rm vidio-lite yarn build'
 alias build-all='build-lite && build-vidio'
 alias dc='docker-compose'
 alias dcrm='dc run --rm --use-aliases --service-ports'
+alias gcof="git checkout \$(git branch -a | sed 's#remotes/origin/##' | fzf | xargs)"
 
 alias emulator="$HOME/Android/Sdk/emulator/emulator"
 alias api_28="$HOME/Android/Sdk/emulator/emulator -avd Pixel_3a_XL_API_28"

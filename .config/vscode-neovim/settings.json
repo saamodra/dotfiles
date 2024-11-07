@@ -901,4 +901,5 @@
   "remote.SSH.remotePlatform": {
     "*.gitpod.io": "linux"
   },
+  "remote.SSH.configFile": "~/Projects/skilla/provisioning/ssh-dev-vpn.cfg",
 }

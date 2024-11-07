@@ -4,8 +4,8 @@
 # Get the name of sinks
 #
 
-HEADPHONES=$(pactl list short sinks | head -n 1 | awk '{print $2}')
-SPEAKERS=$(pactl list short sinks | tail -n 1 | awk '{print $2}')
+HEADPHONES=$(pactl list sinks | grep -B 1 "Description:.*EarPods" | grep "Name:" | awk '{print $2}')
+SPEAKERS=$(pactl list sinks | grep -B 1 "Description:.*Speaker + Headphones" | grep "Name:" | awk '{print $2}')
 
 arg="${1:-}"
 

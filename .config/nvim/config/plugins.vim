@@ -159,8 +159,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Locate test file
 Plug 'vim-test/vim-test'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>F :TestNearest<CR>
 
@@ -196,7 +194,9 @@ let test#javascript#jest#executable = 'docker compose exec web yarn test'
 " let g:test#preserve_screen = 0
 " let g:test#basic#start_normal = 1
 tmap <C-o> <C-\><C-n>
-
+Plug 'brenoprata10/nvim-highlight-colors'
+Plug 'akinsho/git-conflict.nvim'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 filetype plugin indent on

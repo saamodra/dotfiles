@@ -79,7 +79,7 @@ then
   --header 'Content-Type: application/json' \
   --data '{
     "username": "samodra",
-    "password": "5jlkW237M95ISes*",
+    "password": "samodra",
     "otp": ""
   }' \
   -o $AUTH_CONF

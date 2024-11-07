@@ -10,5 +10,8 @@ lua require('init')
 
 
 " for git, add spell checking and automatic wrapping at 72 columns
-autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype gitcommit setlocal spell textwidth=120
+
+" Set indentation to 2 spaces for HTML files
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 
