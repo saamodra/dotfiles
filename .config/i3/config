@@ -212,9 +212,9 @@ set $fan_device_id c6a01146752385d48cdf1a3c17b25a649b2a776a9c0d5cf0de9101bc18ff0
 bindcode 127 exec ~/scripts/toggle-switch.sh -d $fan_device_id
 
 # Spotify Controls
-# bindcode 75 exec ~/App/spotify_control next
-# bindcode 74 exec "~/App/spotify_control playpause"
-# bindcode 73 exec "~/App/spotify_control previous"
+bindcode 96 exec --no-startup-id "~/Apps/spotify_control next"
+bindcode 95 exec --no-startup-id "~/Apps/spotify_control playpause"
+bindcode 76 exec --no-startup-id "~/Apps/spotify_control previous"
 
 bindsym $mod+Shift+s exec "flameshot gui"
 bindsym $mod+Ctrl+v exec "copyq toggle"

@@ -26,7 +26,9 @@ nnoremap Y y$
 nnoremap vv `[V`]
 
 " clean up trailing whitespace
-map <Leader>c :StripTrailingWhitespaces<cr>
+map <Leader>cw :StripTrailingWhitespaces<cr>
+" copy the relative file path to the clipboard
+nnoremap <leader>cr :call CopyRelativeFilePath()<CR>
 
 " compress excess whitespace on current line
 map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>

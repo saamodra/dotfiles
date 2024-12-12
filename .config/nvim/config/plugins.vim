@@ -188,8 +188,8 @@ nmap gc :CopilotChat<CR>
 Plug 'APZelos/blamer.nvim'
 let g:blamer_enabled = 1
 
-let test#ruby#rspec#executable = 'docker compose exec web rspec'
-let test#javascript#jest#executable = 'docker compose exec web yarn test'
+let test#ruby#rspec#executable = 'docker compose exec web bin/rspec'
+let test#javascript#jest#executable = 'docker compose exec vidio-lite yarn test'
 " let g:test#neovim#start_normal = 1
 " let g:test#preserve_screen = 0
 " let g:test#basic#start_normal = 1

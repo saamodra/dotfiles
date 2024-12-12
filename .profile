@@ -30,7 +30,7 @@ alias vpint='sudo openvpn ~/vpn/kmk-int.ovpn'
 alias vpprod='sudo openvpn ~/vpn/kmk-prod.ovpn'
 alias vpdev='sudo openvpn ~/vpn/kmk-dev.ovpn'
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:"$HOME/go/bin"
 export PATH=$PATH:"$HOME/Apps/bin"
 export PATH=$PATH:"$HOME/.local/share/gem/ruby/3.2.0/bin"
 export PATH=$PATH:"$HOME/.rbenv/bin"
