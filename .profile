@@ -29,10 +29,13 @@ alias lampp-start='sudo /opt/lampp/lampp start'
 alias vpint='sudo openvpn ~/vpn/kmk-int.ovpn'
 alias vpprod='sudo openvpn ~/vpn/kmk-prod.ovpn'
 alias vpdev='sudo openvpn ~/vpn/kmk-dev.ovpn'
+alias vim='nvim'
 
 export PATH=$PATH:"$HOME/Apps/bin"
 export PATH=$PATH:"$HOME/scripts"
 export PATH=$PATH:"$HOME/.rbenv/bin"
+export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
+export PATH="$PATH:/opt/nvim"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

@@ -115,6 +115,9 @@ export GROUP_ID=$(id -g)
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_BUILDKIT=1
 export SSH_AUTH_SOCK=/run/user/${UID}/gnupg/S.gpg-agent.ssh
+export VIDIO_SERVER_SSH_USERNAME=samodra
+export VIDIO_SKILLA_DIRECTORY=${HOME}/Projects/skilla
+export VIDIO_ELASTICSEARCH_GKE_CLIENT_HOSTS="http://localhost:9200"
 
 source ~/.profile
 
