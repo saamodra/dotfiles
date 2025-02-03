@@ -12,7 +12,7 @@ configurations=(
   "~/.config/bumblebee-status/config ./.config/bumblebee-status/config"
   "~/.config/betterlockscreen/betterlockscreenrc ./.config/betterlockscreen/betterlockscreenrc"
   "~/.config/rofi ./.config"
-  "~/.config/nvim ./.config"
+  "~/.config/nvim/* ./.config/lazyvim"
   "~/.config/homebridge ./.config"
   "~/.config/dunst ./.config"
   "~/.config/alacritty ./.config"
@@ -41,7 +41,7 @@ configurations=(
 IFS=""
 
 for cfg in ${configurations[@]}; do
-  eval `echo rsync -avzh $cfg`
+  eval $(echo rsync -avzh $cfg)
 done
 
 echo "======================================="
