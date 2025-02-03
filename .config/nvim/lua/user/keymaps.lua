@@ -10,13 +10,10 @@ map('n', '<leader>a', ':keepjumps normal! ggVG<cr>', "Select all")
 map({'n', 'x'}, 'gy', '"+y', "Copy to clipboard")
 map({'n', 'x'}, 'gp', '"+p', "Paste from clipboard")
 
--- Delete text
-map({'n', 'x'}, 'x', '"_x', "Delete without yanking")
-map({'n', 'x'}, 'X', '"_d', "Delete without yanking")
-
 -- Commands
 map('n', '<leader>bq', '<cmd>bdelete<cr>', "Close current buffer")
 map('n', '<leader>bl', '<cmd>buffer #<cr>', "Switch to last buffer")
+map("t", "<C-o>", "<C-\\><C-n>", "Exit Terminal Mode")
 
 -- Window navigation
 map('n', '<C-J>', '<C-W>j', "Move to window below")
@@ -38,6 +35,7 @@ map('n', '<leader>ge', '<cmd>Gedit<cr>', "Git edit (open file in index)")
 map('n', '<leader>gc', '<cmd>CopilotChat<cr>', "GitHub Copilot Chat")
 
 -- Neotest keymaps
+map('n', '<leader>tf', '<cmd>TestNearest<cr>', "Run Test Vim-Test")
 map('n', '<leader>tr', ':lua require("neotest").run.run()<CR>', "Run Test")
 map('n', '<leader>tc', ':lua require("neotest").run.stop()<CR>', "Stop Test")
 map('n', '<leader>tt', ':lua require("neotest").run.run(vim.fn.expand("%"))<CR>', "Run Tests on Current File")

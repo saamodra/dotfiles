@@ -2,20 +2,6 @@ local Plugin = {'nvim-lualine/lualine.nvim'}
 
 Plugin.event = 'VeryLazy'
 
-local filename = {
-  'filename',
-  file_status = true,
-  newfile_status = false,
-  path = 1,
-  shorting_target = 40,
-  symbols = {
-    modified = '[+]',
-    readonly = '[-]',
-    unnamed = '[No Name]',
-    newfile = '[New]',
-  }
-}
-
 -- See :help lualine.txt
 Plugin.opts = {
   options = {

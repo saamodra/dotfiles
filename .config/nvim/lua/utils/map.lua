@@ -1,8 +1,9 @@
 local M = {}
 
-function M.map(mode, l, r, desc, opts)
-  vim.keymap.set(mode, l, r, vim.tbl_extend('force', opts or {}, { desc = desc }))
+function M.map(mode, lhs, rhs, desc, opts)
+  opts = opts or {}
+  opts.desc = desc
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 return M
-
