@@ -8,10 +8,9 @@ local Plugins = {
 	{'slim-template/vim-slim'},
 	{'neovim/nvim-lspconfig'},
 	{'hrsh7th/nvim-compe'},
-	{'tpope/vim-rails'},
 	{'tpope/vim-dispatch'},
 	{'onsails/lspkind.nvim'},
-	{'rcarriga/nvim-notify'},
+  {'vim-test/vim-test'},
   { 'echasnovski/mini.nvim', version = false },
 
   -- Themes

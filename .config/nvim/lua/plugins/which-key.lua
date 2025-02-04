@@ -33,6 +33,7 @@ return {
       { "<leader>gc", desc = "Github Copilot Chat" },
 
       { "<leader>t", group = "Test" },
+      { "<leader>tf", desc = "Run Test Vim-Test" },
       { "<leader>tr", desc = "Run Test" },
       { "<leader>tt", desc = "Run Test on Current File" },
       { "<leader>ts", desc = "Toggle Test Summary" },
