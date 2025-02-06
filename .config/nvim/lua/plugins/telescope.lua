@@ -22,7 +22,6 @@ function Plugin.init()
   map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", "Diagnostics")
   map("n", "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search in Buffer")
   map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", "Diagnostics")
-  map("n", "<leader>fn", "<cmd>Telescope notify<cr>", "Notifications")
   map("n", "<leader>fc", "<cmd>Telescope cmdline<cr>", "Cmdline")
 end
 

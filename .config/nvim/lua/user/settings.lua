@@ -15,7 +15,3 @@ vim.opt.splitbelow = true
 vim.opt.cursorline = true
 vim.opt.clipboard="unnamedplus"
 
--- vim.api.nvim_command('filetype indent off')
--- vim.opt.smartindent = false
-
-
