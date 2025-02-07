@@ -34,7 +34,6 @@ configurations=(
   "~/.nvimrc .nvimrc"
   "~/.profile .profile"
   "~/.zshrc .zshrc"
-  "~/.zsh_history .zsh_history"
   "~/scripts ./"
 )
 

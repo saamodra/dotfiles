@@ -37,6 +37,14 @@ export PATH=$PATH:"$HOME/.rbenv/bin"
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 export PATH="$PATH:/opt/nvim"
 
+git() {
+  if [ "$1" = "pair" ]; then
+    RBENV_VERSION=3.1.6 command git pair "${@:2}"
+  else
+    command git "$@"
+  fi
+}
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
