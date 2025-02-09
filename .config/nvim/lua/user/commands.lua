@@ -21,22 +21,18 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   command = "setlocal filetype=slim"
 })
 
--- Strip trailing whitespace
 function StripTrailingWhitespaces()
-  -- Preparation: save last search, and cursor position.
   local _s = vim.fn.getreg('/')
   local l = vim.fn.line('.')
   local c = vim.fn.col('.')
-  -- Do the business:
+
   vim.cmd('%s/\\s\\+$//e')
-  -- Clean up: restore previous search history, and cursor position
   vim.fn.setreg('/', _s)
   vim.fn.cursor(l, c)
 end
 
 vim.api.nvim_create_user_command('StripTrailingWhitespaces', StripTrailingWhitespaces, {})
 
--- Copy relative file path
 function CopyRelativeFilePath()
   local filepath = vim.fn.expand('%')
   vim.fn.setreg('+', filepath)
@@ -44,3 +40,17 @@ function CopyRelativeFilePath()
 end
 
 vim.api.nvim_create_user_command('CopyRelativeFilePath', CopyRelativeFilePath, {})
+
+function _G.set_terminal_keymaps()
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+end
+
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+

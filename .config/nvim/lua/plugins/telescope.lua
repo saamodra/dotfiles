@@ -49,6 +49,11 @@ function Plugin.config()
         },
       },
     },
+    pickers = {
+      git_branches = {
+        previewer = false
+      }
+    },
     extensions = {
       live_grep_args = {
         auto_quoting = true,

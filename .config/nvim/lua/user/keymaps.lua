@@ -3,9 +3,6 @@ local map = require('utils.map').map
 -- Space as leader key
 vim.g.mapleader = ' '
 
--- Shortcuts
-map('n', '<leader>a', ':keepjumps normal! ggVG<cr>', "Select all")
-
 -- Basic clipboard interaction
 map({'n', 'x'}, 'gy', '"+y', "Copy to clipboard")
 map({'n', 'x'}, 'gp', '"+p', "Paste from clipboard")
@@ -28,7 +25,7 @@ map('n', '<leader>cr', '<cmd>lua CopyRelativeFilePath()<cr>', "Copy relative fil
 -- Git keymaps
 map('n', '<leader>gs', '<cmd>Git<cr>', "Git status")
 map('n', '<leader>gd', '<cmd>Gdiffsplit<cr>', "Git diff")
-map('n', '<leader>gb', '<cmd>Git blame<cr>', "Git blame")
+map('n', '<leader>gb', '<cmd>Telescope git_branches<cr>', "Git branch")
 map('n', '<leader>gr', '<cmd>Gread<cr>', "Git read (checkout file)")
 map('n', '<leader>gw', '<cmd>Gwrite<cr>', "Git write (stage file)")
 map('n', '<leader>ge', '<cmd>Gedit<cr>', "Git edit (open file in index)")
