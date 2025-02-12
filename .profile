@@ -1,5 +1,6 @@
 export EDITOR="nvim"
 export BROWSER="microsoft-edge"
+export MYVIMRC="$HOME/.config/nvim/init.lua"
 
 alias gdcn!="git duet-commit --amend --no-edit"
 alias gdc="git duet-commit"

@@ -67,6 +67,7 @@ function Plugin.config()
       'cssls',
       'solargraph',
       'lua_ls',
+      'tailwindcss'
     },
     handlers = {
       -- See :help mason-lspconfig-dynamic-server-setup
@@ -85,6 +86,9 @@ function Plugin.config()
             }
           }
         })
+      end,
+      ['tailwindcss'] = function()
+        lspconfig.tailwindcss.setup {}
       end,
       ['lua_ls'] = function()
         require('plugins.lsp.lua_ls')

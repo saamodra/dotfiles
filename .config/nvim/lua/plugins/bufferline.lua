@@ -6,7 +6,11 @@ Plugin.opts = {
   options = {
     mode = 'buffers',
     offsets = {
-      {filetype = 'NvimTree'}
+      {
+        filetype = "NvimTree",
+        text = "File Explorer",
+        text_align = "center",
+      },
     },
   },
   -- :help bufferline-highlights
@@ -15,7 +19,7 @@ Plugin.opts = {
       italic = false
     },
     indicator_selected = {
-      fg = {attribute = 'fg', highlight = 'Function'},
+      fg = { attribute = 'fg', highlight = 'Function' },
       italic = false
     }
   }

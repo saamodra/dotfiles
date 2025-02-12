@@ -13,8 +13,6 @@ local Plugins = {
   { 'vim-test/vim-test' },
   { 'echasnovski/mini.move', version = false },
   { 'echasnovski/mini.pairs', version = false },
-  { 'echasnovski/mini.surround', version = false },
-  { 'echasnovski/mini.bracketed', version = false },
   { 'echasnovski/mini.trailspace', version = false },
   { 'chrisgrieser/nvim-spider', lazy = true },
 
@@ -22,6 +20,7 @@ local Plugins = {
   { 'folke/tokyonight.nvim' },
   { 'joshdick/onedark.vim' },
   { 'tanvirtin/monokai.nvim' },
+  { 'rebelot/kanagawa.nvim' },
   { 'lunarvim/darkplus.nvim' },
 	{ 'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
 }
