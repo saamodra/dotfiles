@@ -1,4 +1,8 @@
-# Neovim Configuration Setup
+# Neovim Configuration
+
+<a href="https://dotfyle.com/saamodra/dotfiles-config-nvim"><img src="https://dotfyle.com/saamodra/dotfiles-config-nvim/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/saamodra/dotfiles-config-nvim"><img src="https://dotfyle.com/saamodra/dotfiles-config-nvim/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/saamodra/dotfiles-config-nvim"><img src="https://dotfyle.com/saamodra/dotfiles-config-nvim/badges/plugin-manager?style=for-the-badge" /></a>
 
 This guide will help you install and set up my Neovim configuration.
 

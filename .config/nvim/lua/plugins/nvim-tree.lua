@@ -9,7 +9,6 @@ return {
     require("nvim-tree").setup {}
 
     vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true, desc = "Toggle NvimTree" })
-
     vim.api.nvim_set_keymap('n', '<leader>E', ':NvimTreeFindFile<CR>', { noremap = true, silent = true, desc = "Focus File" })
   end,
 }

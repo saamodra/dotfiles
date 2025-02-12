@@ -1,28 +1,34 @@
 local Plugins = {
+  -- Git Plugins
   { 'tpope/vim-fugitive' },
-  { 'wellle/targets.vim' },
-  { 'tpope/vim-repeat' },
-  { 'kyazdani42/nvim-web-devicons', lazy = true },
+
+  -- Editing Enhancements
+  { 'wellle/targets.vim', lazy = true },
+  { 'mg979/vim-visual-multi', event = 'VeryLazy' },
+  { 'slim-template/vim-slim', ft = 'slim' },
   { 'numToStr/Comment.nvim', config = true, event = 'VeryLazy' },
-  { 'mg979/vim-visual-multi' },
-	{ 'slim-template/vim-slim' },
-	{ 'neovim/nvim-lspconfig' },
-	{ 'hrsh7th/nvim-compe' },
-	{ 'tpope/vim-dispatch' },
-	{ 'onsails/lspkind.nvim' },
-  { 'vim-test/vim-test' },
-  { 'echasnovski/mini.move', version = false },
-  { 'echasnovski/mini.pairs', version = false },
-  { 'echasnovski/mini.trailspace', version = false },
+
+  -- LSP & Autocompletion
+  { 'neovim/nvim-lspconfig' },
+  { 'hrsh7th/nvim-compe', event = 'InsertEnter' },
+  { 'onsails/lspkind.nvim', lazy = true },
+
+  -- Testing
+  { 'vim-test/vim-test', cmd = { 'TestNearest', 'TestFile', 'TestSuite' } },
+
+  -- Mini Plugins
+  { 'echasnovski/mini.move', lazy = true },
+  { 'echasnovski/mini.pairs', event = 'InsertEnter' },
+  { 'echasnovski/mini.trailspace', lazy = true },
+
+  -- Better Motion
   { 'chrisgrieser/nvim-spider', lazy = true },
 
-  -- Themes
-  { 'folke/tokyonight.nvim' },
-  { 'joshdick/onedark.vim' },
-  { 'tanvirtin/monokai.nvim' },
-  { 'rebelot/kanagawa.nvim' },
-  { 'lunarvim/darkplus.nvim' },
-	{ 'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
+  -- Icons (Required by other plugins)
+  { 'kyazdani42/nvim-web-devicons', lazy = true },
+
+  -- Theme (Should load first)
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, lazy = false }
 }
 
 return Plugins

@@ -1,7 +1,6 @@
 return {
 	"chrisgrieser/nvim-spider",
 	keys = {
-
 		{
 			"w",
 			"<cmd>lua require('spider').motion('e')<CR>",

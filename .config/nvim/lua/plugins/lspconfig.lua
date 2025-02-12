@@ -31,7 +31,7 @@ function Plugin.init()
     severity_sort = true,
     float = {
       border = 'rounded',
-      source = 'always',
+      source = true
     },
   })
 
@@ -94,11 +94,7 @@ function Plugin.config()
         require('plugins.lsp.lua_ls')
       end,
 			['eslint'] = function()
-				lspconfig.eslint.setup({
-					capabilities = lsp_capabilities,
-					cmd = { '/home/samodra/.local/share/nvim/mason/bin/vscode-eslint-language-server', '--stdio' },
-					filetypes = { 'javascript', 'typescript', 'typescriptreact', 'javascriptreact' },
-				})
+        require('plugins.lsp.eslint')
 			end
     }
   })
