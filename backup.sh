@@ -27,6 +27,7 @@ configurations=(
   "~/.config/mimeapps.list.rc ./.config/mimeapps.list.rc"
   "~/.config/greenclip.toml ./.config/greenclip.toml"
   "~/.config/pavucontrol.ini ./.config/pavucontrol.ini"
+  "~/MyProjects/pyproject/*.py ./pyscripts"
   "~/.antigenrc .antigenrc"
   "~/.bashrc .bashrc"
   "~/.ideavimrc .ideavimrc"

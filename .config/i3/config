@@ -204,8 +204,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q 
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
 
 # Sink Switcher
-bindcode 152 exec --no-startup-id ~/scripts/sink-switch.sh --speakers
-bindcode 180 exec --no-startup-id ~/scripts/sink-switch.sh --headphones
+bindcode 152 exec --no-startup-id ~/scripts/sink-selector.sh
 
 # Homebridge Fan Toggle
 set $fan_device_id c6a01146752385d48cdf1a3c17b25a649b2a776a9c0d5cf0de9101bc18ff05f2
