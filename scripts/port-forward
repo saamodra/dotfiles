@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ $# -lt 2 ]]; then
+  echo "Usage: $0 <last_octet> <port1> [port2] [port3] ..."
+  exit 1
+fi
+
+BASE_IP="10.251.64"
+
+LAST_OCTET=$1
+FULL_IP="$BASE_IP.$LAST_OCTET"
+
+SSH_CONFIG="~/Projects/skilla/provisioning/ssh-dev-vpn.cfg"
+
+# Shift to remove the first argument (last octet), leaving only the ports
+shift
+
+SSH_CMD="ssh -fN -F $SSH_CONFIG samodra@$FULL_IP"
+
+for PORT in "$@"; do
+  SSH_CMD+=" -L $PORT:localhost:$PORT"
+done
+
+# Execute the SSH command
+echo "Executing: $SSH_CMD"
+eval "$SSH_CMD"
