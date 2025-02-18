@@ -16,4 +16,4 @@ theme='style-4'
 rofi \
     -show emoji \
     -theme ${dir}/${theme}.rasi \
-    -modi "emoji:/usr/local/bin/rofimoji" 
+    -modi "emoji:$HOME/.local/bin/rofimoji" 
