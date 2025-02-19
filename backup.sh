@@ -28,6 +28,7 @@ configurations=(
   "~/.config/greenclip.toml ./.config/greenclip.toml"
   "~/.config/pavucontrol.ini ./.config/pavucontrol.ini"
   "~/MyProjects/pyproject/*.py ./pyscripts"
+  "~/MyProjects/pyproject/*.txt ./pyscripts"
   "~/.antigenrc .antigenrc"
   "~/.bashrc .bashrc"
   "~/.ideavimrc .ideavimrc"

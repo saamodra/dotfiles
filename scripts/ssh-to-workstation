@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 <last_octet> [port1] [port2] [port3] ..."
+  exit 1
+fi
+
+BASE_IP="10.251.64"
+
+LAST_OCTET=$1
+FULL_IP="$BASE_IP.$LAST_OCTET"
+
+SSH_CONFIG="~/Projects/skilla/provisioning/ssh-dev-vpn.cfg"
+
+# Shift untuk menghilangkan last_octet dari argumen
+shift
+
+SSH_CMD="ssh -F $SSH_CONFIG samodra@$FULL_IP"
+
+# Tambahkan port forwarding hanya jika ada port yang diberikan
+if [[ $# -gt 0 ]]; then
+  for PORT in "$@"; do
+    SSH_CMD+=" -L $PORT:localhost:$PORT"
+  done
+fi
+
+# Eksekusi perintah SSH
+echo "Executing: $SSH_CMD"
+eval "$SSH_CMD"
+
