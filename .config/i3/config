@@ -95,6 +95,7 @@ set $FN_F1 152
 set $F8 74
 set $F9 75
 set $F10 76
+set $fan_device_id "d7b765675c21cf895f5390a07833956ad1ded09e9d1e1d93103bc9e7842eb3a3"
 
 bindcode $pause exec ~/scripts/toggle-switch.sh -d $fan_device_id
 bindcode $FN_F1 exec --no-startup-id ~/scripts/sink-selector.sh

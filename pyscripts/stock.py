@@ -17,7 +17,7 @@ def is_market_closed():
 
 def save_stock_data(filename, data):
     with open(filename, 'w') as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
 
 
 def load_stock_data(filename):
@@ -31,7 +31,8 @@ def get_ticker_data(ticker_name, use_color, cache_file='stock_data.json'):
     try:
         stock_data = load_stock_data(cache_file)
         if is_market_closed() and ticker_name in stock_data:
-            today_close, difference = stock_data[ticker_name]
+            today_close = stock_data[ticker_name]['today_close']
+            difference = stock_data[ticker_name]['difference']
         else:
             ticker = yf.Ticker(ticker_name)
             data = ticker.history(period='5d')
@@ -40,7 +41,10 @@ def get_ticker_data(ticker_name, use_color, cache_file='stock_data.json'):
             yesterday_close = last_two_closes.iloc[0]
             difference = today_close - yesterday_close
 
-            stock_data[ticker_name] = (today_close, difference)
+            stock_data[ticker_name] = {
+                'today_close': today_close,
+                'difference': difference
+            }
             save_stock_data(cache_file, stock_data)
 
         if difference > 0:

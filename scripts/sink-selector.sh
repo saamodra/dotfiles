@@ -17,7 +17,7 @@ menu=$(for id in "${!sinks_map[@]}"; do
     echo "$id;${sinks_map[$id]}"
 done | awk -F';' '{print $1 " - " $3}')
 
-chosen_sink_id=$(echo "$menu" | rofi -dmenu -p "Select Audio Output" -theme ~/.config/rofi/launchers/type-4/style-2.rasi | awk '{print $1}')
+chosen_sink_id=$(echo "$menu" | rofi -dmenu -i -p "Select Audio Output" -theme ~/.config/rofi/launchers/type-4/style-2.rasi | awk '{print $1}')
 
 sink_name=$(echo "${sinks_map[$chosen_sink_id]}" | awk -F';' '{print $1}')
 

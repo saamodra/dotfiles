@@ -9,18 +9,6 @@ AUTH_CONF="$HOME/.config/homebridge/auth.json"
 USERNAME="samodra"
 PASSWORD="samodra"
 
-getAccessToken() {
-  if [ -f "$AUTH_CONF" ]; then
-    access_token=$(jq -r '.access_token' "$AUTH_CONF")
-    if [ -n "$access_token" ]; then
-      echo "Using existing access token."
-      return
-    fi
-  fi
-  echo "Access token not found. Logging in to get a new token..."
-  getNewAccessToken
-}
-
 getNewAccessToken() {
   curl --silent --location "$HOMEBRIDGE_URL/api/auth/login" \
     --header 'Content-Type: application/json' \
@@ -53,7 +41,5 @@ getAccessoriesUniqueId() {
   echo "$response" | jq -r '.[] | "\(.serviceName): \(.uniqueId)"'
 }
 
-getAccessToken
+getNewAccessToken
 getAccessoriesUniqueId
-
-
