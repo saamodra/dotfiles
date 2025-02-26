@@ -14,4 +14,5 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.cursorline = true
 vim.opt.clipboard="unnamedplus"
+vim.opt.colorcolumn = '100'
 

@@ -210,10 +210,12 @@ for_window [class="xdman-Main"] floating enable
 for_window [class="Pycalendar.py"] floating enable, move position mouse, border pixel 0
 for_window [class="copyq"] floating enable, border pixel 0
 for_window [class="PersepolisDM"] floating enable
+for_window [class="Free Download Manager"] floating enable
 for_window [class="xdg-desktop-portal-gnome"] floating enable, border pixel 0
 for_window [class="Evolution-alarm-notify"] floating enable
 for_window [class="Gnome-terminal"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 for_window [title=".*TextBlaze.*" class="Brave-browser"] floating enable, move position mouse
 for_window [class="^.*"] border pixel 2
+for_window [class="Microsoft-edge" instance="crx__jbkfoedolllekgbhcbcoahefnbanhhlh"] floating enable
 

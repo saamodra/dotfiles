@@ -15,13 +15,14 @@ local map = require("utils.map").map
 
 function Plugin.init()
   map("n", "<C-P>", "<cmd>Telescope find_files<cr>", "Find Files (Ctrl+P)")
+  map("n", "<C-F>", "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search in Buffer")
   map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", "Open Buffers")
   map("n", "<leader>fc", "<cmd>Telescope cmdline<cr>", "Cmdline")
   map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", "Diagnostics")
   map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", "Find Files")
   map("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Live Grep")
   map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", "Recently Opened Files")
-  map("n", "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search in Buffer")
+  map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", "Git Status")
   map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", "Todo Comments")
 end
 
