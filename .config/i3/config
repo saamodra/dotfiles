@@ -91,13 +91,16 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Keybindings
 set $pause 127
+set $prtsc 107
 set $FN_F1 152
 set $F8 74
 set $F9 75
 set $F10 76
 set $fan_device_id "d7b765675c21cf895f5390a07833956ad1ded09e9d1e1d93103bc9e7842eb3a3"
+set $table_lamp_id "e637546cc4a9a49c649ddd7dbc1683b292f41f61434001c7bec4bff3c280a1e2"
 
-bindcode $pause exec ~/scripts/toggle-switch.sh -d $fan_device_id
+bindcode $pause exec python3 ~/scripts/toggle_switch.py -d $fan_device_id
+bindcode $prtsc exec python3 ~/scripts/toggle_switch.py -d $table_lamp_id
 bindcode $FN_F1 exec --no-startup-id ~/scripts/sink-selector.sh
 bindcode $F8 exec --no-startup-id "~/Apps/spotify_control previous"
 bindcode $F9 exec --no-startup-id "~/Apps/spotify_control playpause"

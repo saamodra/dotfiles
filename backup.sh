@@ -13,7 +13,7 @@ configurations=(
   "~/.config/betterlockscreen/betterlockscreenrc ./.config/betterlockscreen/betterlockscreenrc"
   "~/.config/rofi ./.config"
   "~/.config/nvim/* ./.config/nvim"
-  "~/.config/homebridge ./.config"
+  "~/.config/homebridge/config.json ./.config/homebridge"
   "~/.config/dunst ./.config"
   "~/.config/alacritty ./.config"
   "~/.config/btop ./.config"
