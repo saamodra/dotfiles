@@ -27,7 +27,6 @@ Below is a list of configurations stored in this repository:
 - **LunarVim** - A preconfigured Neovim setup with enhanced features
 - **Neovim** - A Vim-based text editor with better performance
 - **LazyVim** - A starter template for Neovim
-- **Nvim-Single** - A lightweight Neovim configuration for single-instance usage
 - **Vscode-Neovim** - Neovim integration within VSCode
 - **Vscode-Vim** - Vim keybindings for VSCode
 - **IdeaVim** - Vim keybindings for JetBrains IDEs
