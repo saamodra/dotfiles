@@ -23,6 +23,8 @@ function Plugin.init()
   map("n", "<leader>fg", "<cmd>Telescope live_grep_args<cr>", "Live Grep")
   map("n", "<leader>fm", "<cmd>Telescope bookmarks list<cr>", "Bookmarks")
   map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", "Recently Opened Files")
+  map("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", "Quickfix List")
+  map("n", "<leader>fQ", "<cmd>Telescope quickfixhistory<cr>", "Quickfix History")
   map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", "Git Status")
   map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", "Todo Comments")
 end
@@ -48,6 +50,8 @@ function Plugin.config()
           ["<C-k>"] = actions.move_selection_previous,
           ["<C-u>"] = MultiMove(actions.move_selection_previous, 4),
           ["<C-d>"] = MultiMove(actions.move_selection_next, 4),
+          ["<Tab>"] = actions.toggle_selection + actions.move_selection_next,
+          ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_previous,
         },
       },
     },
@@ -61,8 +65,9 @@ function Plugin.config()
         auto_quoting = true,
         mappings = {
           i = {
-            ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
-            ["<C-space>"] = lga_actions.quote_prompt(),
+            ["<C-space>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+            ["<Tab>"] = actions.toggle_selection + actions.move_selection_next,
+            ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_previous,
           },
         },
       },

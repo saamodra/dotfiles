@@ -40,8 +40,8 @@ case $chosen in
     $shutdown)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-		      # Switch off charger
-		      ~/scripts/toggle-switch.sh -s 0 -d "26614f2d9d2d0c609a0385473f032573beb7e469488da75f87ce267ecaa088e3"
+		  # Switch off charger
+		  python3 ~/scripts/toggle_switch.py -d "9082ad1ef04683dddd0b5615ef621f66b8bc46aee62e1b686bd9da4eb0046501"
 			# rclone sync ~/Documents/Personal/Secret.kdbx drive:Documents
 			systemctl poweroff
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then

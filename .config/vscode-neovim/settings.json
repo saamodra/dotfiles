@@ -903,5 +903,5 @@
   },
   "remote.SSH.configFile": "~/Projects/skilla/provisioning/ssh-dev-vpn.cfg",
   "jestrunner.jestCommand": "yarn spec",
-  "playwright.reuseBrowser": true,
+  "playwright.reuseBrowser": false,
 }

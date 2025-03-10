@@ -26,7 +26,7 @@ return {
       { "<leader>gs", desc = "Git Status" },
       { "<leader>gh", desc = "Git Changes" },
       { "<leader>gd", desc = "Git Diff" },
-      { "<leader>gb", desc = "Git Blame" },
+      { "<leader>gb", desc = "Git Branch" },
       { "<leader>gr", desc = "Git Read (Checkout File)" },
       { "<leader>gw", desc = "Git Write (Stage File)" },
       { "<leader>ge", desc = "Git Edit (Open File in Index)" },
