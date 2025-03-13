@@ -72,7 +72,7 @@ gaps outer $outer_gaps
 
 # Run automatically programs
 exec --no-startup-id betterlockscreen -w dim
-exec_always feh --bg-fill ~/Pictures/catppuccin-wallpapers/minimalistic/darker_unicat.png
+exec_always feh --bg-fill ~/Pictures/catppuccin-wallpapers/os/various-os-1-4k.png
 exec_always flameshot
 exec_always ~/.config/polybar/forest/launch.sh
 exec_always ~/scripts/auto-charge.sh

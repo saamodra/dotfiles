@@ -11,7 +11,8 @@ Plugin.opts = {
     topdelete = {text = '➤'},
     changedelete = {text = '▎'},
   },
-  on_attach = function(buffer)
+  current_line_blame = true,
+  on_attach = function()
     local gs = package.loaded.gitsigns
     local map = require("utils.map").map
 
