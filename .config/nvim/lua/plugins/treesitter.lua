@@ -32,7 +32,7 @@ Plugin.opts = {
 		'lua',
 		'vim',
 		'vimdoc',
-		'css',
+	  'css',
 		'json'
 	},
 	-- nvim-treesitter-context
