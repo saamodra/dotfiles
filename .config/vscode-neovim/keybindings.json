@@ -421,5 +421,20 @@
     "key": "ctrl+t",
     "command": "workbench.panel.chat.view.copilot.toggleVisibility",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.navigateForward",
+    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.navigateBack",
+    "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+alt+a",
+    "command": "alternateFile.alternateFile",
+    "when": "editorTextFocus"
   }
 ]

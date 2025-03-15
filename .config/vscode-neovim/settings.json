@@ -35,7 +35,8 @@
   },
   "[json]": {
     "editor.indentSize": 4,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[php]": {
     "editor.indentSize": 4,
@@ -206,9 +207,9 @@
   "redhat.telemetry.enabled": true,
   "ruby.specCommand": "docker compose exec web rspec",
   "rubyLsp.rubyVersionManager": {
-    "identifier": "rvm"
+    "identifier": "rbenv"
   },
-  "rubyLsp.bundleGemfile": "/home/woi/ruby-extensions/Gemfile",
+  "rubyLsp.bundleGemfile": "/home/samodra/ruby-extensions/Gemfile",
   "rufo.exe": "rufo",
   "rufo.useBundler": false,
   "scss.validate": false,
@@ -225,43 +226,29 @@
   "vim.incsearch": true,
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "whichkey.show"
-      ],
+      "before": ["<space>"],
+      "commands": ["whichkey.show"],
       "silent": true
     },
     {
-      "before": [
-        "<C-o>"
-      ],
-      "commands": [
-        ":tabn"
-      ]
+      "before": ["u"],
+      "commands": ["undo"],
+      "silent": true
     },
     {
-      "before": [
-        "<C-i>"
-      ],
-      "commands": [
-        ":tabp"
-      ]
-    }
+      "before": ["<C-r>"],
+      "commands": ["redo"],
+      "silent": true
+    },
   ],
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "whichkey.show"
-      ],
+      "before": ["<space>"],
+      "commands": ["whichkey.show"],
       "silent": true
-    }
+    },
   ],
   "whichkey.bindings": [
     {
@@ -269,13 +256,6 @@
       "name": "Commands",
       "type": "command",
       "command": "workbench.action.showCommands"
-    },
-    {
-      "key": "/",
-      "name": "Comment",
-      "type": "command",
-      "command": "vscode-neovim.send",
-      "args": "gcc"
     },
     {
       "key": "b",
@@ -331,16 +311,22 @@
           "command": "workbench.action.nextEditor"
         },
         {
+          "key": "N",
+          "name": "New untitled editor",
+          "type": "command",
+          "command": "workbench.action.files.newUntitledFile"
+        },
+        {
           "key": "p",
           "name": "Previous editor",
           "type": "command",
           "command": "workbench.action.previousEditor"
         },
         {
-          "key": "N",
-          "name": "New untitled editor",
+          "key": "q",
+          "name": "Close all editors in group",
           "type": "command",
-          "command": "workbench.action.files.newUntitledFile"
+          "command": "workbench.action.closeEditorsInGroup"
         },
         {
           "key": "u",
@@ -358,6 +344,19 @@
             "cancelSelection"
           ]
         }
+      ]
+    },
+    {
+      "key": "c",
+      "name": "Custom Commands",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "r",
+          "name": "Copy Relative Path",
+          "type": "command",
+          "command": "copyRelativeFilePath"
+        },
       ]
     },
     {
@@ -514,10 +513,35 @@
           "command": "git.fetch"
         },
         {
-          "key": "i",
-          "name": "Init",
+          "key": "h",
+          "name": "Hunk...",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "p",
+              "name": "Preview",
+              "type": "command",
+              "command": "editor.action.dirtydiff.next"
+            },
+            {
+              "key": "r",
+              "name": "Reset",
+              "type": "command",
+              "command": "git.revertSelectedRanges"
+            }
+          ]
+        },
+        {
+          "key": "j",
+          "name": "Jump to the Next Changes",
           "type": "command",
-          "command": "git.init"
+          "command": "workbench.action.editor.nextChange"
+        },
+        {
+          "key": "k",
+          "name": "Jump to the Previous Changes",
+          "type": "command",
+          "command": "workbench.action.editor.previousChange"
         },
         {
           "key": "m",
@@ -555,7 +579,7 @@
       "key": "h",
       "name": "Split Horizontal",
       "type": "command",
-      "command": "workbench.action.splitEditorDown"
+      "command": "workbench.action.splitEditor"
     },
     {
       "key": "i",
@@ -587,13 +611,6 @@
       "name": "Minimap",
       "type": "command",
       "command": "editor.action.toggleMinimap"
-    },
-    {
-      "key": "n",
-      "name": "Highlight",
-      "type": "command",
-      "command": "vscode-neovim.send",
-      "args": ":noh<CR>"
     },
     {
       "key": "r",
@@ -753,7 +770,7 @@
       "key": "v",
       "name": "Split Vertical",
       "type": "command",
-      "command": "workbench.action.splitEditor"
+      "command": "workbench.action.splitEditorDown"
     },
     {
       "key": "w",
@@ -873,7 +890,7 @@
       "terminal.ansiBrightYellow": "#d19a66"
     }
   },
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "multiple",
@@ -903,5 +920,9 @@
   },
   "remote.SSH.configFile": "~/Projects/skilla/provisioning/ssh-dev-vpn.cfg",
   "jestrunner.jestCommand": "yarn spec",
-  "playwright.reuseBrowser": false,
+  "playwright.reuseBrowser": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
 }

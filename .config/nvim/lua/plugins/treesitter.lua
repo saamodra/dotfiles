@@ -5,15 +5,13 @@ Plugin.dependencies = {
 	{'nvim-treesitter/nvim-treesitter-context'}
 }
 
--- See :help nvim-treesitter-modules
 Plugin.opts = {
 	highlight = {
 		enable = true,
 	},
-  indent = {
-    enable = true
-  },
-	-- :help nvim-treesitter-textobjects-modules
+	indent = {
+		enable = true
+	},
 	textobjects = {
 		select = {
 			enable = true,
@@ -37,10 +35,18 @@ Plugin.opts = {
 		'css',
 		'json'
 	},
+	-- nvim-treesitter-context
+	context = {
+		enable = true,
+    max_lines = 5,
+    trim_scope = 'inner',
+	}
 }
 
-function Plugin.config(name, opts)
+function Plugin.config(opts)
 	require('nvim-treesitter.configs').setup(opts)
+
+	require('treesitter-context').setup(opts.context)
 end
 
 return Plugin
