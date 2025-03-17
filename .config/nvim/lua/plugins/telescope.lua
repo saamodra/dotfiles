@@ -65,7 +65,7 @@ function Plugin.config()
         auto_quoting = true,
         mappings = {
           i = {
-            ["<C-space>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+            ["<C-o>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
             ["<Tab>"] = actions.toggle_selection + actions.move_selection_next,
             ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_previous,
           },
