@@ -1,4 +1,5 @@
 export EDITOR="nvim"
+export SUDO_EDITOR="nvim"
 export BROWSER="microsoft-edge"
 export MYVIMRC="$HOME/.config/nvim/init.lua"
 
