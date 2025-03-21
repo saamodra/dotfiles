@@ -39,12 +39,19 @@ return {
       { "<leader>ts", desc = "Toggle Test Summary" },
       { "<leader>ta", desc = "Attach to Test" },
 
-      { "<leader>c", group = "Custom Commands", icon = "" },
-      { "<leader>cr", icon = "󰆏" },
-      { "<leader>b", group = "Buffer", icon = "󰀼" },
       { "<leader>a", icon = "" },
+      { "<leader>b", group = "Buffer", icon = "󰀼" },
+      { "<leader>c", group = "Custom Commands", icon = "" },
       { "<leader>e", icon = "", desc = "File Explorer" },
       { "<leader>E", icon = "", desc = "Focus File" },
+      { "<leader>t", icon = "󰂖" },
+      { "<leader>ta", icon = "󰁦" },
+      { "<leader>tc", icon = "󰙧" },
+      { "<leader>tf", icon = "" },
+      { "<leader>tr", icon = "" },
+      { "<leader>y", icon = "󰆏" },
+      { "<leader>yr", icon = "󰆏" },
+      { "<leader>yp", icon = "󰆏" },
 
       { "<leader>?", icon = "󰋗" },
     })

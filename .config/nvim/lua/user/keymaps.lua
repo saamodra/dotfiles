@@ -20,9 +20,14 @@ map('n', '<C-L>', '<C-W>l', "Move to window right")
 
 -- Custom commands
 map('n', '<leader>cw', '<cmd>lua StripTrailingWhitespaces()<cr>', "Strip trailing whitespaces")
-map('n', '<leader>cr', '<cmd>lua CopyRelativeFilePath()<cr>', "Copy relative file path")
 map('n', '<leader>cn', '<cmd>cnext<cr>', "Quickfix Next")
 map('n', '<leader>cp', '<cmd>cprev<cr>', "Quickfix Previous")
+map('n', '<leader>ct', '<cmd>TailwindSort<cr>', "Tailwind Sort")
+map('v', '<leader>ct', '<cmd>TailwindSortSelection<cr>', "Tailwind Sort Selection")
+
+map('n', '<leader>yr', '<cmd>lua CopyRelativeFilePath()<cr>', "Copy relative file path")
+map('n', '<leader>yp', '<cmd>lua GetYamlPath()<cr>', "Copy YAML path")
+
 
 -- Git keymaps
 map('n', '<leader>gs', '<cmd>Git<cr>', "Git status")

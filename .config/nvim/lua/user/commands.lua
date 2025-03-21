@@ -41,6 +41,31 @@ end
 
 vim.api.nvim_create_user_command('CopyRelativeFilePath', CopyRelativeFilePath, {})
 
+function GetYamlPath()
+  local ts_utils = require("nvim-treesitter.ts_utils")
+  local node = ts_utils.get_node_at_cursor()
+
+  if not node then
+    print("No node found")
+    return
+  end
+
+  local path = {}
+  while node do
+    if node:type() == "block_mapping_pair" then
+      table.insert(path, 1, vim.treesitter.get_node_text(node:child(0), 0))
+    end
+    node = node:parent()
+  end
+
+  local yaml_path = table.concat(path, ".")
+  vim.fn.setreg("+", yaml_path)
+  print("Copied YAML path: " .. yaml_path)
+end
+
+vim.api.nvim_create_user_command('GetYamlPath', GetYamlPath, {})
+
+
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)

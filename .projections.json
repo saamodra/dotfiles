@@ -1,0 +1,38 @@
+{
+  "app/*.rb": {
+    "alternate": "spec/{}_spec.rb"
+  },
+  "app/*.slim": {
+    "alternate": "spec/{}.slim_spec.rb"
+  },
+  "spec/*.slim_spec.rb": {
+    "alternate": "app/{}.slim"
+  },
+  "spec/*_spec.rb": {
+    "alternate": "app/{}.rb"
+  },
+  "lib/*.rb": {
+    "alternate": "spec/lib/{}_spec.rb"
+  },
+  "spec/lib/*_spec.rb": {
+    "alternate": "lib/{}.rb"
+  },
+  "app/javascript/deprecated/*.js": {
+    "alternate": ["spec-webpack/javascripts/{}.test.js"]
+  },
+  "spec-webpack/javascripts/*.test.js": {
+    "alternate": ["app/javascript/deprecated/{}.js"]
+  },
+  "vidio-lite/src/*.ts": {
+    "alternate": ["vidio-lite/src/{}.test.ts", "vidio-lite/src/{}.test.tsx"]
+  },
+  "vidio-lite/src/*.tsx": {
+    "alternate": ["vidio-lite/src/{}.test.tsx", "vidio-lite/src/{}.test.ts"]
+  },
+  "vidio-lite/src/*.test.ts": {
+    "alternate": ["vidio-lite/src/{}.ts", "vidio-lite/src/{}.tsx"]
+  },
+  "vidio-lite/src/*.test.tsx": {
+    "alternate": ["vidio-lite/src/{}.tsx", "vidio-lite/src/{}.ts"]
+  }
+}
